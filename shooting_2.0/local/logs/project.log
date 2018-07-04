@@ -1,0 +1,247 @@
+2018-07-03T01:34:40.390Z - normal: Load ~/.CocosCreator/settings.json
+2018-07-03T01:34:40.395Z - normal: checking language setting...
+2018-07-03T01:34:40.396Z - normal: Language: zh
+2018-07-03T01:34:43.109Z - success: protocol editor-framework registered
+2018-07-03T01:34:43.109Z - success: protocol app registered
+2018-07-03T01:34:43.109Z - success: protocol theme registered
+2018-07-03T01:34:43.109Z - success: protocol packages registered
+2018-07-03T01:34:43.110Z - success: protocol unpack registerred
+2018-07-03T01:34:43.110Z - success: protocol disable-commonjs registerred
+2018-07-03T01:34:43.325Z - normal: connected!
+2018-07-03T01:34:43.330Z - normal: Check project D:\game-demo\aircraft_2.0
+2018-07-03T01:34:43.336Z - normal: Initializing Cocos2d
+2018-07-03T01:34:43.837Z - normal: Initializing Asset Database
+2018-07-03T01:34:43.883Z - success: protocol uuid registerred
+2018-07-03T01:34:43.883Z - success: protocol db registerred
+2018-07-03T01:34:43.884Z - success: protocol thumbnail registerred
+2018-07-03T01:34:43.884Z - normal: Loading editor/builtin packages
+2018-07-03T01:34:43.962Z - success: anysdk loaded
+2018-07-03T01:34:44.147Z - success: assets loaded
+2018-07-03T01:34:44.155Z - success: builder loaded
+2018-07-03T01:34:44.158Z - success: cocos-analytics loaded
+2018-07-03T01:34:44.163Z - success: console loaded
+2018-07-03T01:34:44.233Z - success: fb-instant-games loaded
+2018-07-03T01:34:44.237Z - success: hierarchy loaded
+2018-07-03T01:34:44.241Z - success: inspector loaded
+2018-07-03T01:34:44.247Z - success: keystore loaded
+2018-07-03T01:34:44.258Z - success: node-library loaded
+2018-07-03T01:34:44.263Z - success: package-asset loaded
+2018-07-03T01:34:44.266Z - success: preferences loaded
+2018-07-03T01:34:44.268Z - success: project-exporter loaded
+2018-07-03T01:34:44.291Z - success: project-importer loaded
+2018-07-03T01:34:44.293Z - success: project-settings loaded
+2018-07-03T01:34:44.296Z - success: ui-kit loaded
+2018-07-03T01:34:44.298Z - success: ui-grid loaded
+2018-07-03T01:34:44.305Z - success: scene loaded
+2018-07-03T01:34:44.309Z - success: sprite-editor loaded
+2018-07-03T01:34:44.316Z - success: store loaded
+2018-07-03T01:34:44.336Z - success: timeline loaded
+2018-07-03T01:34:44.337Z - normal: Loading builtin packages
+2018-07-03T01:34:44.339Z - success: asset-db-debugger loaded
+2018-07-03T01:34:44.342Z - success: code-editor loaded
+2018-07-03T01:34:44.343Z - success: color-picker loaded
+2018-07-03T01:34:44.346Z - success: package-manager loaded
+2018-07-03T01:34:44.351Z - success: sdkbox loaded
+2018-07-03T01:34:44.354Z - success: tester loaded
+2018-07-03T01:34:44.356Z - success: ui-kit-preview-extra loaded
+2018-07-03T01:34:44.358Z - success: ui-kit-preview loaded
+2018-07-03T01:34:44.362Z - success: ui-tree loaded
+2018-07-03T01:34:46.572Z - normal: Initializing project D:\game-demo\aircraft_2.0
+2018-07-03T01:34:46.578Z - normal: Loading packages
+2018-07-03T01:34:46.583Z - normal: Watching packages
+2018-07-03T01:34:46.599Z - normal: Run Application
+2018-07-03T01:34:47.408Z - success: preview server running at http://localhost:7456
+2018-07-03T01:34:53.492Z - normal: 1.9.1
+2018-07-03T01:48:25.800Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\game-demo\\aircraft_2.0\\build",
+  "debug": false,
+  "dest": "D:\\game-demo\\aircraft_2.0\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "26a89fa7-378e-4cda-907e-8554d057f15d",
+    "58c8b6f0-efc8-4441-9182-294eb32034c1",
+    "c17fcbdd-1bf0-4fc1-88ba-c8e6ac30689d"
+  ],
+  "sourceMaps": false,
+  "startScene": "26a89fa7-378e-4cda-907e-8554d057f15d",
+  "template": "link",
+  "title": "aircraft",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wxecab160fb5830d32",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "c7173a2e-7325-45",
+  "zipCompressJs": true,
+  "project": "D:\\game-demo\\aircraft_2.0",
+  "projectName": "aircraft",
+  "debugBuildWorker": false
+}
+2018-07-03T01:48:25.807Z - normal: Building D:\game-demo\aircraft_2.0
+2018-07-03T01:48:25.807Z - normal: Destination D:\game-demo\aircraft_2.0\build\wechatgame
+2018-07-03T01:48:26.480Z - normal: Delete D:\game-demo\aircraft_2.0\build\wechatgame\**\*
+2018-07-03T01:48:29.505Z - normal: Compiled project javascript file successfully
+2018-07-03T01:48:29.506Z - normal: Start building assets
+2018-07-03T01:48:29.506Z - normal: Start spawn build-worker
+2018-07-03T01:48:30.585Z - normal: Finish spawn build-worker
+2018-07-03T01:48:30.585Z - normal: Start init build-worker
+2018-07-03T01:48:33.888Z - normal: 1.9.1
+2018-07-03T01:48:33.985Z - normal: Finish init build-worker
+2018-07-03T01:48:33.986Z - normal: Start build-assets in worker
+2018-07-03T01:48:34.712Z - normal: Finish build-assets in worker
+2018-07-03T01:48:34.724Z - normal: Finish building assets
+2018-07-03T01:48:34.738Z - normal: Start building raw assets
+2018-07-03T01:48:34.738Z - normal: Start building plugin scripts
+2018-07-03T01:48:34.977Z - normal: Finish building raw assets
+2018-07-03T01:48:35.003Z - normal: Generating main.js from D:\CocosCreator\resources\static\build-templates\shares\main.js
+2018-07-03T01:48:35.267Z - normal: Built to "D:\game-demo\aircraft_2.0\build\wechatgame" successfully
+2018-07-03T01:48:52.589Z - warn: 找不到微信开发程序版本信息路径 [D:\App-test\微信web开发者工具\package.nw\package.json]。
+2018-07-03T01:48:52.590Z - warn: 微信开发程序版本过低，不能享用所有功能，请尽快升级。
+2018-07-03T01:48:55.017Z - normal: Initializing...
+
+2018-07-03T01:48:55.028Z - normal: idePortFile: C:\Users\Administrator\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2018-07-03T01:48:56.042Z - normal: starting ide...
+
+2018-07-03T01:49:00.971Z - normal: IDE server has started, listening on http://127.0.0.1:53744
+
+2018-07-03T01:49:00.975Z - normal: initialization finished
+
+2018-07-03T01:49:01.453Z - normal: open IDE success
+
+2018-07-03T01:54:17.810Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\game-demo\\aircraft_2.0\\build",
+  "debug": false,
+  "dest": "D:\\game-demo\\aircraft_2.0\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "26a89fa7-378e-4cda-907e-8554d057f15d",
+    "58c8b6f0-efc8-4441-9182-294eb32034c1",
+    "c17fcbdd-1bf0-4fc1-88ba-c8e6ac30689d"
+  ],
+  "sourceMaps": false,
+  "startScene": "26a89fa7-378e-4cda-907e-8554d057f15d",
+  "template": "link",
+  "title": "aircraft",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wxecab160fb5830d32",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "c7173a2e-7325-45",
+  "zipCompressJs": true,
+  "project": "D:\\game-demo\\aircraft_2.0",
+  "projectName": "aircraft",
+  "debugBuildWorker": false
+}
+2018-07-03T01:54:17.835Z - normal: Building D:\game-demo\aircraft_2.0
+2018-07-03T01:54:17.835Z - normal: Destination D:\game-demo\aircraft_2.0\build\wechatgame
+2018-07-03T01:54:17.837Z - normal: Delete D:\game-demo\aircraft_2.0\build\wechatgame\**\*
+2018-07-03T01:54:20.380Z - normal: Compiled project javascript file successfully
+2018-07-03T01:54:20.380Z - normal: Start building assets
+2018-07-03T01:54:20.380Z - normal: Start spawn build-worker
+2018-07-03T01:54:21.325Z - normal: Finish spawn build-worker
+2018-07-03T01:54:21.325Z - normal: Start init build-worker
+2018-07-03T01:54:23.753Z - normal: 1.9.1
+2018-07-03T01:54:23.824Z - normal: Finish init build-worker
+2018-07-03T01:54:23.825Z - normal: Start build-assets in worker
+2018-07-03T01:54:24.303Z - normal: Finish build-assets in worker
+2018-07-03T01:54:24.324Z - normal: Finish building assets
+2018-07-03T01:54:24.340Z - normal: Start building raw assets
+2018-07-03T01:54:24.342Z - normal: Start building plugin scripts
+2018-07-03T01:54:24.398Z - normal: Finish building raw assets
+2018-07-03T01:54:24.402Z - normal: Generating main.js from D:\CocosCreator\resources\static\build-templates\shares\main.js
+2018-07-03T01:54:24.748Z - normal: Built to "D:\game-demo\aircraft_2.0\build\wechatgame" successfully
+2018-07-03T01:54:47.748Z - warn: 找不到微信开发程序版本信息路径 [D:\App-test\微信web开发者工具\package.nw\package.json]。
+2018-07-03T01:54:47.750Z - warn: 微信开发程序版本过低，不能享用所有功能，请尽快升级。
+2018-07-03T01:54:48.404Z - normal: Initializing...
+
+2018-07-03T01:54:48.411Z - normal: idePortFile: C:\Users\Administrator\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2018-07-03T01:54:49.433Z - normal: starting ide...
+
+2018-07-03T01:54:52.920Z - normal: IDE server has started, listening on http://127.0.0.1:36455
+
+2018-07-03T01:54:52.926Z - normal: initialization finished
+
+2018-07-03T01:54:53.301Z - normal: open IDE success
+
+2018-07-03T01:58:22.653Z - info: shutdown preview server

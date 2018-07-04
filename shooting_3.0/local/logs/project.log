@@ -1,0 +1,235 @@
+2018-07-04T03:16:49.456Z - normal: Load ~/.CocosCreator/settings.json
+2018-07-04T03:16:49.462Z - normal: checking language setting...
+2018-07-04T03:16:49.463Z - normal: Language: zh
+2018-07-04T03:16:51.346Z - success: protocol editor-framework registered
+2018-07-04T03:16:51.347Z - success: protocol app registered
+2018-07-04T03:16:51.347Z - success: protocol theme registered
+2018-07-04T03:16:51.347Z - success: protocol packages registered
+2018-07-04T03:16:51.347Z - success: protocol unpack registerred
+2018-07-04T03:16:51.348Z - success: protocol disable-commonjs registerred
+2018-07-04T03:16:51.564Z - normal: connected!
+2018-07-04T03:16:51.574Z - normal: Check project D:\game-demo\aircraft_3.0
+2018-07-04T03:16:51.581Z - normal: Initializing Cocos2d
+2018-07-04T03:16:51.829Z - normal: Initializing Asset Database
+2018-07-04T03:16:51.863Z - success: protocol uuid registerred
+2018-07-04T03:16:51.864Z - success: protocol db registerred
+2018-07-04T03:16:51.864Z - success: protocol thumbnail registerred
+2018-07-04T03:16:51.864Z - normal: Loading editor/builtin packages
+2018-07-04T03:16:51.885Z - success: anysdk loaded
+2018-07-04T03:16:52.017Z - success: assets loaded
+2018-07-04T03:16:52.019Z - success: builder loaded
+2018-07-04T03:16:52.021Z - success: cocos-analytics loaded
+2018-07-04T03:16:52.025Z - success: console loaded
+2018-07-04T03:16:52.072Z - success: fb-instant-games loaded
+2018-07-04T03:16:52.074Z - success: hierarchy loaded
+2018-07-04T03:16:52.077Z - success: inspector loaded
+2018-07-04T03:16:52.079Z - success: keystore loaded
+2018-07-04T03:16:52.081Z - success: node-library loaded
+2018-07-04T03:16:52.083Z - success: package-asset loaded
+2018-07-04T03:16:52.084Z - success: preferences loaded
+2018-07-04T03:16:52.086Z - success: project-exporter loaded
+2018-07-04T03:16:52.100Z - success: project-importer loaded
+2018-07-04T03:16:52.102Z - success: project-settings loaded
+2018-07-04T03:16:52.104Z - success: ui-kit loaded
+2018-07-04T03:16:52.105Z - success: ui-grid loaded
+2018-07-04T03:16:52.108Z - success: scene loaded
+2018-07-04T03:16:52.109Z - success: sprite-editor loaded
+2018-07-04T03:16:52.112Z - success: store loaded
+2018-07-04T03:16:52.115Z - success: timeline loaded
+2018-07-04T03:16:52.115Z - normal: Loading builtin packages
+2018-07-04T03:16:52.117Z - success: asset-db-debugger loaded
+2018-07-04T03:16:52.118Z - success: code-editor loaded
+2018-07-04T03:16:52.119Z - success: color-picker loaded
+2018-07-04T03:16:52.121Z - success: package-manager loaded
+2018-07-04T03:16:52.125Z - success: sdkbox loaded
+2018-07-04T03:16:52.127Z - success: tester loaded
+2018-07-04T03:16:52.128Z - success: ui-kit-preview-extra loaded
+2018-07-04T03:16:52.129Z - success: ui-kit-preview loaded
+2018-07-04T03:16:52.130Z - success: ui-tree loaded
+2018-07-04T03:16:53.242Z - normal: Initializing project D:\game-demo\aircraft_3.0
+2018-07-04T03:16:53.247Z - normal: Loading packages
+2018-07-04T03:16:53.252Z - normal: Watching packages
+2018-07-04T03:16:53.264Z - normal: Run Application
+2018-07-04T03:16:53.961Z - success: preview server running at http://localhost:7457
+2018-07-04T03:16:59.614Z - normal: 1.9.1
+2018-07-04T03:19:24.190Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\game-demo\\aircraft_3.0\\build",
+  "debug": false,
+  "dest": "D:\\game-demo\\aircraft_3.0\\build\\wechatgame",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "26a89fa7-378e-4cda-907e-8554d057f15d",
+    "58c8b6f0-efc8-4441-9182-294eb32034c1",
+    "c17fcbdd-1bf0-4fc1-88ba-c8e6ac30689d"
+  ],
+  "sourceMaps": false,
+  "startScene": "26a89fa7-378e-4cda-907e-8554d057f15d",
+  "template": "link",
+  "title": "aircraft",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wxecab160fb5830d32",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "c7173a2e-7325-45",
+  "zipCompressJs": true,
+  "project": "D:\\game-demo\\aircraft_3.0",
+  "projectName": "aircraft",
+  "debugBuildWorker": false
+}
+2018-07-04T03:19:24.194Z - normal: Building D:\game-demo\aircraft_3.0
+2018-07-04T03:19:24.194Z - normal: Destination D:\game-demo\aircraft_3.0\build\wechatgame
+2018-07-04T03:19:24.715Z - normal: Delete D:\game-demo\aircraft_3.0\build\wechatgame\**\*
+2018-07-04T03:19:28.094Z - normal: Compiled project javascript file successfully
+2018-07-04T03:19:28.095Z - normal: Start building assets
+2018-07-04T03:19:28.095Z - normal: Start spawn build-worker
+2018-07-04T03:19:29.326Z - normal: Finish spawn build-worker
+2018-07-04T03:19:29.326Z - normal: Start init build-worker
+2018-07-04T03:19:32.436Z - normal: 1.9.1
+2018-07-04T03:19:32.547Z - normal: Finish init build-worker
+2018-07-04T03:19:32.547Z - normal: Start build-assets in worker
+2018-07-04T03:19:32.972Z - warn: Can not find particle texture in D:\game-demo\aircraft_3.0\assets\prefab\defaultTexture.png, plist: D:\game-demo\aircraft_3.0\assets\prefab\squareParticle.plist
+2018-07-04T03:19:33.342Z - normal: Finish build-assets in worker
+2018-07-04T03:19:33.352Z - normal: Finish building assets
+2018-07-04T03:19:33.369Z - normal: Start building raw assets
+2018-07-04T03:19:33.371Z - normal: Start building plugin scripts
+2018-07-04T03:19:33.453Z - normal: Finish building raw assets
+2018-07-04T03:19:33.476Z - normal: Generating main.js from D:\CocosCreator\resources\static\build-templates\shares\main.js
+2018-07-04T03:19:33.862Z - normal: Built to "D:\game-demo\aircraft_3.0\build\wechatgame" successfully
+2018-07-04T03:20:18.196Z - warn: 找不到微信开发程序版本信息路径 [D:\App-test\微信web开发者工具\package.nw\package.json]。
+2018-07-04T03:20:18.197Z - warn: 微信开发程序版本过低，不能享用所有功能，请尽快升级。
+2018-07-04T03:20:19.041Z - normal: Initializing...
+
+2018-07-04T03:20:19.049Z - normal: idePortFile: C:\Users\Administrator\AppData\Local\微信web开发者工具\User Data\Default\.ide
+
+2018-07-04T03:20:20.071Z - normal: starting ide...
+
+2018-07-04T03:20:23.913Z - normal: IDE server has started, listening on http://127.0.0.1:26917
+
+2018-07-04T03:20:23.922Z - normal: initialization finished
+
+2018-07-04T03:20:24.776Z - normal: open IDE success
+
+2018-07-04T08:04:06.836Z - normal: Start building with options : {
+  "androidStudio": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "D:\\game-demo\\aircraft_3.0\\build",
+  "debug": false,
+  "dest": "D:\\game-demo\\aircraft_3.0\\build\\web-mobile",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeEruda": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "web-mobile",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "26a89fa7-378e-4cda-907e-8554d057f15d",
+    "58c8b6f0-efc8-4441-9182-294eb32034c1",
+    "c17fcbdd-1bf0-4fc1-88ba-c8e6ac30689d"
+  ],
+  "sourceMaps": false,
+  "startScene": "26a89fa7-378e-4cda-907e-8554d057f15d",
+  "template": "link",
+  "title": "aircraft",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wxecab160fb5830d32",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "c7173a2e-7325-45",
+  "zipCompressJs": true,
+  "project": "D:\\game-demo\\aircraft_3.0",
+  "projectName": "aircraft",
+  "debugBuildWorker": false
+}
+2018-07-04T08:04:06.845Z - normal: Building D:\game-demo\aircraft_3.0
+2018-07-04T08:04:06.845Z - normal: Destination D:\game-demo\aircraft_3.0\build\web-mobile
+2018-07-04T08:04:06.846Z - normal: Delete D:\game-demo\aircraft_3.0\build\web-mobile\**\*
+2018-07-04T08:04:11.436Z - normal: Compiled project javascript file successfully
+2018-07-04T08:04:11.436Z - normal: Start building assets
+2018-07-04T08:04:11.437Z - normal: Start spawn build-worker
+2018-07-04T08:04:12.515Z - normal: Finish spawn build-worker
+2018-07-04T08:04:12.515Z - normal: Start init build-worker
+2018-07-04T08:04:15.385Z - normal: 1.9.1
+2018-07-04T08:04:15.487Z - normal: Finish init build-worker
+2018-07-04T08:04:15.488Z - normal: Start build-assets in worker
+2018-07-04T08:04:16.078Z - warn: Can not find particle texture in D:\game-demo\aircraft_3.0\assets\prefab\defaultTexture.png, plist: D:\game-demo\aircraft_3.0\assets\prefab\squareParticle.plist
+2018-07-04T08:04:16.628Z - normal: Finish build-assets in worker
+2018-07-04T08:04:16.644Z - normal: Finish building assets
+2018-07-04T08:04:16.667Z - normal: Start building raw assets
+2018-07-04T08:04:16.669Z - normal: Start building plugin scripts
+2018-07-04T08:04:16.726Z - normal: Finish building raw assets
+2018-07-04T08:04:16.743Z - normal: Generating main.js from D:\CocosCreator\resources\static\build-templates\shares\main.js
+2018-07-04T08:04:16.765Z - normal: Generating html from D:\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
+2018-07-04T08:04:16.819Z - normal: Built to "D:\game-demo\aircraft_3.0\build\web-mobile" successfully
