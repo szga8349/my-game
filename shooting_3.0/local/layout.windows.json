@@ -79,7 +79,7 @@
             "width": 1082
           },
           {
-            "active": 1,
+            "active": 0,
             "children": [
               "inspector",
               "builder"

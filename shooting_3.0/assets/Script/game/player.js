@@ -8,7 +8,8 @@ cc.Class({
         bulletPrefab: {
             default: null,
             type: cc.Prefab
-        }
+        },
+        count: 0
     },
 
     // 碰撞检测
@@ -64,8 +65,9 @@ cc.Class({
         // cc.log(bullet.datakey)
     },
     shooting() {
-        this.schedule(() => {
-            if (Global.gameData.over) return;
+        if (Global.gameData.over) return;
+        this.count += 1;
+        if (this.count % parseInt(60 / Global.gameData.bulletNum) === 0) {
             // 检查获取道具包
             if (Global.gameData.pack === 'three') {
                 for (let i = 1; i <= 3; i++) {
@@ -74,7 +76,8 @@ cc.Class({
             } else {
                 this.createBullet(Global.game.node);
             }
-        },1 / Global.gameData.bulletNum)
+        }
+        if (this.count >= 600) this.count = 0;
     },
     // LIFE-CYCLE CALLBACKS:
 
@@ -87,5 +90,7 @@ cc.Class({
         // this.getComponent('player')
     },
 
-    // update (dt) {},
+    update (dt) {
+        this.shooting()
+    },
 });

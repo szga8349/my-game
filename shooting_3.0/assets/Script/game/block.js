@@ -20,7 +20,7 @@ cc.Class({
         } else {
             cc.log('重新创建粒子');
             blast = cc.instantiate(this.blastPrefab);
-            blast.getComponent(cc.ParticleSystem).stopSystem();
+            // blast.getComponent(cc.ParticleSystem).stopSystem();
         }
         blast.setPosition(_x, _y);
         blast.parent = this.node.parent;

@@ -72,8 +72,6 @@ cc.Class({
         for (let i = 0; i < 3; i++) {
             this.createBlockList(i);
         }
-        // 开始发射子弹
-        this.player.getComponent('player').shooting();
         // 道具定时派出
         this.schedule(() => {
             this.createProp();
@@ -130,9 +128,9 @@ cc.Class({
         let locationv = event.getLocation();
         let location = this.node.convertToNodeSpaceAR(locationv);
         // 飞机不移出屏幕
-        let minX = -this.node.width / 2 + this.player.width / 6,
+        let minX = -this.node.width / 2 + this.player.width / 2,
             maxX = -minX,
-            minY = -this.node.height / 2 + this.player.height / 6,
+            minY = -this.node.height / 2 + this.player.height / 2,
             maxY = -minY;
         if (location.x < minX) location.x = minX;
         if (location.x > maxX) location.x = maxX;
