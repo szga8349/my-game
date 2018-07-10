@@ -29,6 +29,8 @@ module.exports = {
         baseNum: 5,
         // 1秒钟多少个子弹
         bulletNum: 10,
+        // 防止在定时器没结束前保留原来 bulletNum 的值
+        saveNum: 10,
         // 一颗重力弹减少的数量
         forceful: 3,
         // 列表之间间距

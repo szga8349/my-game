@@ -1317,6 +1317,9 @@
     "forcefulPrefab": {
       "__uuid__": "3146eee4-bfa1-4139-bfd0-b7a78bd636a4"
     },
+    "fastPrefab": {
+      "__uuid__": "6bf88ca6-c37d-4731-b908-49e98ff03007"
+    },
     "blastPrefab": {
       "__uuid__": "6fa5a4cd-bc00-46d7-be7f-623ec3a6239b"
     }

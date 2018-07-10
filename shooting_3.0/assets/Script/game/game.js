@@ -54,6 +54,11 @@ cc.Class({
             default: null,
             type: cc.Prefab
         },
+        // 道具包资源（快速弹）
+        fastPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
         // 生成的粒子资源
         blastPrefab: {
             default: null,
@@ -140,13 +145,25 @@ cc.Class({
     },
     // 创建道具包
     createProp() {
-        let type = parseInt(2 * Math.random()) + 1;
+        let type = parseInt(3 * Math.random()) + 1;
         // 随机派送一个道具
-        let newProp = type == 1 ? cc.instantiate(this.propPrefab) : cc.instantiate(this.forcefulPrefab);
-        let _x = parseInt((this.blockBox.width - newProp.width) * Math.random()) + 1 + newProp.width,
+        let newProp = null;
+        switch (type) {
+            case 1:
+                newProp = cc.instantiate(this.propPrefab);
+                break;
+            case 2:
+                newProp = cc.instantiate(this.forcefulPrefab);
+                break;
+            case 3:
+                newProp = cc.instantiate(this.fastPrefab);
+                break;
+        }
+        let _x = parseInt((this.blockBox.width - newProp.width * 2) * Math.random()) + 1 + newProp.width,
             _y = this.blockBox.height + newProp.height;
         newProp.setPosition(_x, _y);
         this.blockBox.addChild(newProp);
+        cc.log('随机的道具类型：', type)
     },
     // 创建方块列表
     createBlockList(num) {
@@ -174,7 +191,8 @@ cc.Class({
         Global.gameData.score = 0;
         Global.gameData.level = 1;
         Global.gameData.pack = '';
-
+        Global.gameData.bulletNum = Global.gameData.saveNum;
+        
         // 开启碰撞系统
         let manager = cc.director.getCollisionManager();
         manager.enabled = true;

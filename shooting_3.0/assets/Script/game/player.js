@@ -14,11 +14,14 @@ cc.Class({
 
     // 碰撞检测
     onCollisionEnter(other, self) {
-        let that = this;
+        const that = this;
         // 清除撞到的道具
         function resetFn(text) {
             if (other.node.name == text) other.node.parent.removeChild(other.node);
-            that.scheduleOnce(() => Global.gameData.pack = '', 5);
+            that.scheduleOnce(() => {
+                Global.gameData.pack = '';
+                if (text == 'fast') Global.gameData.bulletNum = Global.gameData.bulletNum / 2;
+            }, 5);
         }
         console.log('飞机撞到的物体：', other.node.name);
         if (other.node.name == 'prop') {
@@ -27,6 +30,10 @@ cc.Class({
         } else if (other.node.name == 'forceful') {
             Global.gameData.pack = 'forceful';
             resetFn('forceful');
+        } else if (other.node.name == 'fast') {
+            Global.gameData.pack = 'fast';
+            Global.gameData.bulletNum = Global.gameData.bulletNum * 2;
+            resetFn('fast');
         } else {
             Global.game.gameEnd();
         }

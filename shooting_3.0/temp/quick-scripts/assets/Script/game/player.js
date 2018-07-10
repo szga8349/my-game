@@ -25,7 +25,8 @@ cc.Class({
         function resetFn(text) {
             if (other.node.name == text) other.node.parent.removeChild(other.node);
             that.scheduleOnce(function () {
-                return Global.gameData.pack = '';
+                Global.gameData.pack = '';
+                if (text == 'fast') Global.gameData.bulletNum = Global.gameData.bulletNum / 2;
             }, 5);
         }
         console.log('飞机撞到的物体：', other.node.name);
@@ -35,6 +36,10 @@ cc.Class({
         } else if (other.node.name == 'forceful') {
             Global.gameData.pack = 'forceful';
             resetFn('forceful');
+        } else if (other.node.name == 'fast') {
+            Global.gameData.pack = 'fast';
+            Global.gameData.bulletNum = Global.gameData.bulletNum * 2;
+            resetFn('fast');
         } else {
             Global.game.gameEnd();
         }
