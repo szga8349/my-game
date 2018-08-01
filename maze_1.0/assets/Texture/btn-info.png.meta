@@ -5,7 +5,7 @@
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "subMetas": {
-    "swiper": {
+    "btn-info": {
       "ver": "1.0.3",
       "uuid": "d9820b63-f364-4bb6-a75f-c7cbf0f078bb",
       "rawTextureUuid": "33db037b-006a-4a52-b22c-0fa7d366c916",
@@ -14,12 +14,12 @@
       "rotated": false,
       "offsetX": 0,
       "offsetY": 0,
-      "trimX": 1,
-      "trimY": 1,
-      "width": 98,
-      "height": 98,
-      "rawWidth": 100,
-      "rawHeight": 100,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 236,
+      "height": 236,
+      "rawWidth": 240,
+      "rawHeight": 240,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

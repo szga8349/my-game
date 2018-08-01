@@ -218,23 +218,7 @@ cc.Class({
             }
             // 输出到对应容器
             sprite.parent = this.node;
-            // 创建标签
-            // let label = new cc.Node('number').addComponent(cc.Label);
-            // label.string = '123456';
-            // 输出节点
-            // label.node.parent = this.node;
         }
-        // 首次调用
-        // single(900, 'top', 'first');
-        // single(500, 'right');
-        // single(400, 'bottom');
-        // single(600, 'right');
-        // single(500, 'bottom');
-        // single(700, 'left');
-        // single(900, 'bottom');
-        // single(750, 'right');
-        // single(440, 'bottom', 'last');
-
         let list = Global.levels[Global.gameInfo.level].list;
         // 修改对应的关卡速度
         Global.gameInfo.speed = Global.levels[Global.gameInfo.level].speed;

@@ -18,13 +18,36 @@ cc.Class({
         levelIndex: {
             default: null,
             type: cc.Label
+        },
+        // 按钮点击提示条
+        bar: {
+            default: null,
+            type: cc.Node
+        },
+        // 阻止重复点击
+        isClick: false,
+        explain: {
+            default: null,
+            type: cc.Node
         }
     },
     openGame() {
         cc.director.loadScene('Game');
+        if (Global.home.timer) clearTimeout(Global.home.timer);
     },
     openRank() {
         cc.director.loadScene('Rank');
+        if (Global.home.timer) clearTimeout(Global.home.timer);
+    },
+    switchExplain() {
+        this.explain.active = !this.explain.active;
+    },
+    closrBar () {
+        let h = this.bar.height;
+        let hide = cc.moveBy(0.3, cc.p(0, h));
+        this.bar.runAction(hide);
+        this.isClick = false;
+        if (this.timer) clearTimeout(Global.home.timer);
     },
     // 输出按钮
     outPutBtn () {
@@ -86,6 +109,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
+        Global.home = this;
         this.levelIndex.string = `当前玩到第：${Global.gameInfo.level + 1} 关`;
         cc.director.preloadScene('Game', () => console.log('预加载游戏场景成功'));
         this.outPutBtn();

@@ -109,49 +109,18 @@ cc.Class({
         // 添加键盘事件
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, e => {
             // 地图生成用
-            if (e.keyCode == cc.KEY.b) {
-                this.node.getChildByName('camera').getComponent('Camera').camera.zoomRatio -= 0.1
-            } else if (e.keyCode == cc.KEY.v) {
-                this.node.getChildByName('camera').getComponent('Camera').camera.zoomRatio += 0.1
-            }
-            if (Global.game.gameover) return;
             switch (e.keyCode) {
-                case cc.KEY.up:
-                    this.direction = 'top';
+                case cc.KEY.b:
+                    this.node.getChildByName('camera').getComponent('Camera').camera.zoomRatio -= 0.1
                     break;
-                case cc.KEY.down:
-                    this.direction = 'down';
-                    break;
-                case cc.KEY.left:
-                    this.direction = 'left';
-                    break;
-                case cc.KEY.right:
-                    this.direction = 'right';
+                case cc.KEY.v:
+                    this.node.getChildByName('camera').getComponent('Camera').camera.zoomRatio += 0.1
                     break;
                 case cc.KEY.g:
+                    if (Global.game.gameover) break;
                     this.node.getChildByName('camera').getComponent('Camera').stateSwitch()
                     break;
             }
-            // 执行摄像机点击旋转
-            // this.node.getChildByName('camera').getComponent('Camera').clickRotate();
-            // 执行方向旋转
-            let action = null;
-            switch (this.direction) {
-                case 'left':
-                    action = cc.rotateTo(0.2, -90);
-                    break;
-                case 'right':
-                    action = cc.rotateTo(0.2, 90);
-                    break;
-                case 'top':
-                    action = cc.rotateTo(0.2, 0);
-                    break;
-                case 'down':
-                    action = cc.rotateTo(0.2, 180);
-                    break;
-            }
-            this.player.runAction(action);
-            // console.log('执行', this.direction);
             
         }, this)
     },

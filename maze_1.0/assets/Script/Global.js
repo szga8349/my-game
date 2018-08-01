@@ -1,5 +1,6 @@
 module.exports = {
     game: null,
+    home: null,
     gameInfo: {
         // 游戏关卡
         level: 0,
