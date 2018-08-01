@@ -53,6 +53,8 @@ cc.Class({
                 // 储存游戏进度
                 if (Global.gameInfo.level > Global.gameInfo.saveLevel) {
                     Global.gameInfo.saveLevel = Global.gameInfo.level;
+                    // 本地储存一下
+                    window.localStorage.setItem('level', Global.gameInfo.level);
                 }
                 cc.audioEngine.playEffect(this.adoptAudio);
                 this.scheduleOnce(() => {
