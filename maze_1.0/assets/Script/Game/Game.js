@@ -57,7 +57,7 @@ cc.Class({
     tapDirection() {
         if (Global.game.gameover) return;
         // direction => 要移动的方向 move_direction => 转弯的方向
-        // 判断要移动的方向
+        // 判断要移动的方向（与移动方向相反的两个方向随机一个）
         if (this.direction == this.move_direction) {
             let type = parseInt(2 * Math.random());
             if (this.direction == 'top' || this.direction == 'bottom') {

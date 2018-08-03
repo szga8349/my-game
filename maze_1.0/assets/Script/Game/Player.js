@@ -32,8 +32,9 @@ cc.Class({
             Global.game.move_direction = other.node.dataDirection;
         } else if (other.name.includes('wall') && Global.game.gameover === false) {
             cc.log('撞到墙');
+            let wall = other.node.name.split('wall-').join('');
             Global.game.gameover = true;
-            this.overMove();
+            this.overMove(wall);
             cc.audioEngine.playEffect(this.fallAudio);
             // cc.director.loadScene('Rank');
         }
@@ -43,7 +44,7 @@ cc.Class({
         if (other.name.includes('end') && Global.game.gameover === false) {
             cc.log('撞到终点了');
             Global.game.gameover = true;
-            if (Global.gameInfo.level == Global.levels.length-1) {
+            if (Global.gameInfo.level == Global.levels.length - 1) {
                 this.successBox.active = true;
                 let _action = cc.spawn(cc.fadeIn(0.5), cc.scaleTo(0.5, 1, 1));
                 _action.easing(cc.easeOut(3.0));
@@ -65,15 +66,18 @@ cc.Class({
             other.node.destroy();
         }
     },
-    // 执行结束动画
-    overMove() {
+    /**
+     * 执行结束动画
+     * @param {string} wall 撞到的墙
+     */
+    overMove(wall) {
         let action = null;
         let num = this.node.width / 2;
-        switch (Global.game.direction) {
+        switch (wall) {
             case 'top':
                 action = cc.spawn(cc.rotateBy(1, 360), cc.scaleBy(1, 0.4, 0.4), cc.moveBy(1, 0, num));
                 break;
-            case 'down':
+            case 'bottom':
                 action = cc.spawn(cc.rotateBy(1, 360), cc.scaleBy(1, 0.4, 0.4), cc.moveBy(1, 0, -num));
                 break;
             case 'left':
@@ -118,7 +122,7 @@ cc.Class({
 
     // start () {},
 
-    update (dt) {
+    update(dt) {
         this.playerMove();
     },
 });

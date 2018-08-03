@@ -8,7 +8,7 @@ module.exports = {
         saveLevel: 0,
         // 主角移动速度（默认值5）进入游戏后开始由关卡速度去修改
         speed: 5,
-        // 主角转弯是否旋转进入游戏后开始由关卡速度去修改
+        // 主角转弯是否旋转，进入游戏后开始由关卡速度去修改
         rotate: false,
         // 轨道宽度
         conduitWidth: 150, 
@@ -16,7 +16,7 @@ module.exports = {
     /** 
      * 关卡列表
      * speed: 关卡对应的速度
-     * rotate: 转弯的时候是否选择
+     * rotate: 转弯的时候是否旋转
      * random: 随机旋转
     */
     levels: [

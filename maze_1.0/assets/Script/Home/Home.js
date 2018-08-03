@@ -111,6 +111,7 @@ cc.Class({
     onLoad() {
         // 本地获取储存数据
         Global.gameInfo.saveLevel = window.localStorage.getItem('level') ? Number(window.localStorage.getItem('level')) : 0;
+        if (!window.localStorage.getItem('level')) this.explain.active = true;
         Global.home = this;
         this.levelIndex.string = `当前玩到第：${Global.gameInfo.level + 1} 关`;
         cc.director.preloadScene('Game', () => console.log('预加载游戏场景成功'));
