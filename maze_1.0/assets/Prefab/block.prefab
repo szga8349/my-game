@@ -227,7 +227,7 @@
       "__id__": 9
     },
     "_id": "",
-    "_opacity": 0,
+    "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -341,7 +341,7 @@
       "__id__": 13
     },
     "_id": "",
-    "_opacity": 0,
+    "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -455,7 +455,7 @@
       "__id__": 17
     },
     "_id": "",
-    "_opacity": 0,
+    "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -569,7 +569,7 @@
       "__id__": 21
     },
     "_id": "",
-    "_opacity": 0,
+    "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,

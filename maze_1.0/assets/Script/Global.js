@@ -102,37 +102,37 @@ module.exports = {
                     num: 500,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 420,
                     str: 'left'
                 }, {
                     num: 500,
                     str: 'bottom'
                 }, {
-                    num: 400,
+                    num: 420,
                     str: 'left'
                 }, {
                     num: 500,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 420,
                     str: 'left'
                 }, {
                     num: 500,
                     str: 'bottom'
                 }, {
-                    num: 400,
+                    num: 420,
                     str: 'left'
                 }, {
                     num: 500,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 420,
                     str: 'left'
                 }, {
                     num: 500,
                     str: 'bottom'
                 }, {
-                    num: 400,
+                    num: 420,
                     str: 'left'
                 }, {
                     num: 500,
@@ -199,7 +199,7 @@ module.exports = {
             random: true,
             list: [
                 {
-                    num: 400,
+                    num: 420,
                     str: 'top'
                 }, {
                     num: 460,
@@ -235,10 +235,10 @@ module.exports = {
                     num: 800,
                     str: 'left'
                 }, {
-                    num: 400,
+                    num: 420,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'left'
                 }, {
                     num: 600,
@@ -326,10 +326,10 @@ module.exports = {
                     num: 460,
                     str: 'bottom'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'left'
                 }, {
-                    num: 700,
+                    num: 740,
                     str: 'top'
                 }, {
                     num: 500,
@@ -344,13 +344,13 @@ module.exports = {
                     num: 460,
                     str: 'top'
                 }, {
-                    num: 980,
+                    num: 1070,
                     str: 'right'
                 }, {
                     num: 1360,
                     str: 'bottom'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'right'
                 }, 
             ]
@@ -367,7 +367,7 @@ module.exports = {
                     num: 1250,
                     str: 'left'
                 }, {
-                    num: 690,
+                    num: 740,
                     str: 'top'
                 }, {
                     num: 460,
@@ -429,7 +429,7 @@ module.exports = {
                     num: 520,
                     str: 'right'
                 }, {
-                    num: 900,
+                    num: 950,
                     str: 'bottom'
                 }, {
                     num: 1300,
@@ -482,7 +482,7 @@ module.exports = {
                     num: 520,
                     str: 'left'
                 }, {
-                    num: 900,
+                    num: 940,
                     str: 'bottom'
                 }, {
                     num: 1300,
@@ -641,10 +641,10 @@ module.exports = {
                     num: 760,
                     str: 'left'
                 }, {
-                    num: 1100,
+                    num: 1150,
                     str: 'top'
                 }, {
-                    num: 1000,
+                    num: 1040,
                     str: 'right'
                 }, {
                     num: 760,
@@ -815,19 +815,19 @@ module.exports = {
                     num: 880,
                     str: 'top'
                 }, {
-                    num: 900,
+                    num: 1020,
                     str: 'left'
                 }, {
                     num: 780,
                     str: 'bottom'
                 }, {
-                    num: 400,
+                    num: 440,
                     str: 'right'
                 }, {
-                    num: 400,
+                    num: 440,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 440,
                     str: 'right'
                 }, {
                     num: 850,
@@ -918,43 +918,43 @@ module.exports = {
                     num: 930,
                     str: 'right'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'top'
                 }, {
                     num: 1400,
                     str: 'left'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'top'
                 }, {
                     num: 600,
                     str: 'right'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'top'
                 }, {
                     num: 600,
                     str: 'right'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'left'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'top'
                 }, {
                     num: 1000,
                     str: 'right'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'left'
                 }, {
-                    num: 400,
+                    num: 450,
                     str: 'top'
                 }, {
                     num: 1200,
@@ -986,10 +986,10 @@ module.exports = {
                     num: 650,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 440,
                     str: 'left'
                 }, {
-                    num: 880,
+                    num: 920,
                     str: 'bottom'
                 }, {
                     num: 500,
@@ -1054,16 +1054,16 @@ module.exports = {
                     num: 550,
                     str: 'left'
                 }, {
-                    num: 400,
+                    num: 430,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 430,
                     str: 'left'
                 }, {
                     num: 640,
                     str: 'bottom'
                 }, {
-                    num: 400,
+                    num: 430,
                     str: 'left'
                 }, {
                     num: 540,
@@ -1137,13 +1137,13 @@ module.exports = {
                     num: 880,
                     str: 'top'
                 }, {
-                    num: 800,
+                    num: 830,
                     str: 'right'
                 }, {
                     num: 1860,
                     str: 'bottom'
                 }, {
-                    num: 1460,
+                    num: 1560,
                     str: 'left'
                 }, {
                     num: 560,
@@ -1308,7 +1308,7 @@ module.exports = {
                     num: 850,
                     str: 'top'
                 }, {
-                    num: 980,
+                    num: 1020,
                     str: 'right'
                 }, {
                     num: 1240,
@@ -1385,10 +1385,10 @@ module.exports = {
                     num: 450,
                     str: 'right'
                 }, {
-                    num: 800,
+                    num: 870,
                     str: 'top'
                 }, {
-                    num: 1000,
+                    num: 1060,
                     str: 'left'
                 }, {
                     num: 760,
@@ -1403,16 +1403,16 @@ module.exports = {
                     num: 500,
                     str: 'right'
                 }, {
-                    num: 400,
+                    num: 470,
                     str: 'bottom'
                 }, {
-                    num: 400,
+                    num: 470,
                     str: 'left'
                 }, {
-                    num: 400,
+                    num: 470,
                     str: 'bottom'
                 }, {
-                    num: 400,
+                    num: 470,
                     str: 'left'
                 }, {
                     num: 900,
@@ -1622,10 +1622,10 @@ module.exports = {
                     num: 520,
                     str: 'top'
                 }, {
-                    num: 400,
+                    num: 460,
                     str: 'left'
                 }, {
-                    num: 760,
+                    num: 790,
                     str: 'bottom'
                 }, {
                     num: 620,
@@ -1643,7 +1643,7 @@ module.exports = {
                     num: 500,
                     str: 'left'
                 }, {
-                    num: 400,
+                    num: 460,
                     str: 'top'
                 }, {
                     num: 500,
@@ -1663,7 +1663,7 @@ module.exports = {
                     num: 500,
                     str: 'left'
                 }, {
-                    num: 650,
+                    num: 1050,
                     str: 'bottom'
                 }, {
                     num: 450,
@@ -1714,7 +1714,7 @@ module.exports = {
                     num: 500,
                     str: 'top'
                 }, {
-                    num: 750,
+                    num: 790,
                     str: 'right'
                 }, {
                     num: 1650,
@@ -1737,31 +1737,31 @@ module.exports = {
                     num: 950,
                     str: 'top'
                 }, {
-                    num: 400,
-                    str: 'left'
-                }, {
-                    num: 500,
-                    str: 'bottom'
-                }, {
                     num: 450,
                     str: 'left'
                 }, {
                     num: 500,
                     str: 'bottom'
                 }, {
-                    num: 500,
+                    num: 490,
                     str: 'left'
                 }, {
                     num: 500,
                     str: 'bottom'
                 }, {
-                    num: 550,
+                    num: 530,
+                    str: 'left'
+                }, {
+                    num: 500,
+                    str: 'bottom'
+                }, {
+                    num: 570,
                     str: 'left'
                 }, {
                     num: 850,
                     str: 'bottom'
                 }, {
-                    num: 500,
+                    num: 750,
                     str: 'right'
                 }, {
                     num: 400,

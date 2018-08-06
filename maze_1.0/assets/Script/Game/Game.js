@@ -108,7 +108,7 @@ cc.Class({
         this.node.on('touchstart', this.tapDirection, this);
         // 添加键盘事件
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, e => {
-            // 地图生成用
+            // 地图生成测试用
             switch (e.keyCode) {
                 case cc.KEY.b:
                     this.node.getChildByName('camera').getComponent('Camera').camera.zoomRatio -= 0.1

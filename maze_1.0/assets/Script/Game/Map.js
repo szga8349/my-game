@@ -39,8 +39,8 @@ cc.Class({
             let end = sprite.getChildByName('end');
             // 终点旗帜长宽比值
             let value = 5;
-            // 碰撞墙和轨道的间距
-            let spacing = 40;
+            // 碰撞墙和轨道的间距（碰撞物体宽度的一半）
+            let spacing = 50;
             // 设置颜色
             sprite.color = new cc.Color({ r: 255, g: 255, b: 255 });
             switch (direction) {
