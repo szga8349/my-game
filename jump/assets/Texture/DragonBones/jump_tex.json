@@ -1,0 +1,1 @@
+{"width":256,"imagePath":"jump_tex.png","height":128,"name":"jump","SubTexture":[{"width":39,"y":1,"height":54,"name":"右脚","x":109},{"width":39,"y":57,"height":54,"name":"左脚","x":109},{"width":38,"y":53,"height":50,"name":"右手","x":150},{"width":38,"y":1,"height":50,"name":"左手","x":150},{"width":106,"y":1,"height":126,"name":"身体","x":1}]}
