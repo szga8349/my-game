@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "1273c12e-0b84-4595-8c18-50c7a29f675d",
+  "atlasJson": "{\"width\":256,\"imagePath\":\"jump_tex.png\",\"height\":128,\"name\":\"jump\",\"SubTexture\":[{\"width\":39,\"y\":1,\"height\":54,\"name\":\"右脚\",\"x\":109},{\"width\":39,\"y\":57,\"height\":54,\"name\":\"左脚\",\"x\":109},{\"width\":38,\"y\":53,\"height\":50,\"name\":\"右手\",\"x\":150},{\"width\":38,\"y\":1,\"height\":50,\"name\":\"左手\",\"x\":150},{\"width\":106,\"y\":1,\"height\":126,\"name\":\"身体\",\"x\":1}]}",
+  "texture": "0e114088-06d0-4a5a-bd28-a81acb3a448c",
+  "subMetas": {}
+}
