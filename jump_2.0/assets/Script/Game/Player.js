@@ -34,16 +34,7 @@ cc.Class({
     computeScore(width, x) {
         let num = 0, _w = width / 6, _x = Math.abs(x);
 
-        // 之前的判断
-        // if (_x < _w * 3 && _x > _w * 2) {
-        //     num = 1;
-        // } else if (_x < _w * 2 && _x > _w) {
-        //     num = 2;
-        // } else if (_x <= _w) {
-        //     num = 3;
-        // }
-
-        if (_x == 0) {
+        if (_x <= 0.5 * _w) {
             num = 3;
             this.hit += 1;
             // 踩到中间有连击效果
@@ -57,14 +48,13 @@ cc.Class({
                 this.perfect.node.runAction(seq);
             }
             
-        } else if (_x > 0 && _x < _w * 1.5) {
+        } else if (_x > 0.5 * _w && _x <= _w * 1.8) {
             num = 2;
             this.hit = 0;
-        } else if (_x >= _w * 1.5 && _x < _w * 2.8) {
+        } else if (_x > _w * 1.8 && _x < _w * 2.8) {
             num = 1;
             this.hit = 0;
         }
-
         // console.log(Math.abs(x), width);
         Global.gameInfo.score += num;
         this.scoreLabel.string = '得分：' + Global.gameInfo.score;
@@ -97,13 +87,14 @@ cc.Class({
     // 碰撞组件回调
     onCollisionEnter(other, self) {
         if (Global.game.gameover) return;
+        const brick = other.node.parent;
         // cc.log(other.node);
-        other.node.parent.ismove = false;
+        brick.ismove = false;
         switch (other.node.name) {
             case 'top':
                 // cc.log('游戏得分');
                 // this.node.getComponent(cc.RigidBody).gravityScale = 0;
-                this.computeScore(other.node.width, other.node.parent.x);
+                this.computeScore(other.node.width, brick.x);
                 Global.game.node.getChildByName('map').getComponent('Map').createBrick();
                 other.node.destroy();
                 break;
@@ -116,6 +107,9 @@ cc.Class({
                 this.gameOver(false);
                 break;
         }
+        // 清除所有的碰撞组件（ios性能问题）
+        for (let i = 0; i < brick.children.length; i++) brick.children[i].destroy();
+        // console.log(brick.children);
     },
     // LIFE-CYCLE CALLBACKS:
 
@@ -129,7 +123,7 @@ cc.Class({
 
     update (dt) {
         if (Global.game.gameover) return;
-        if (this.node.rotation > 15 || this.node.rotation < -15) {
+        if (Math.abs(this.node.rotation) > 15) {
             // console.log('游戏结束了');
             Global.game.gameover = true;
             this.coverOver.active = true;

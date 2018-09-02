@@ -54,6 +54,9 @@ cc.Class({
         // 开启碰撞系统
         let manager = cc.director.getCollisionManager();
         manager.enabled = true;
+        // 开启调试框
+        // manager.enabledDebugDraw = true;
+        // manager.enabledDrawBoundingBox = true;
     },
 
     start () {

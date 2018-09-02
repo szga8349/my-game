@@ -476,7 +476,7 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 2000,
+      "width": 3000,
       "height": 10
     }
   },
