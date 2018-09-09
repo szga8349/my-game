@@ -27,7 +27,22 @@ cc.Class({
         brickPrefab: {
             default: null,
             type: cc.Prefab
+        },
+    },
+    // 暂停开始按钮
+    stateBtn() {
+        let src = '';
+        if (this.state) {
+            src = 'pause';
+            cc.director.resume();
+        } else {
+            src = 'start';
+            cc.director.pause(); 
         }
+        cc.loader.loadRes(src, cc.SpriteFrame, (err, res) => {
+            this.node.getChildByName('state-btn').getComponent(cc.Sprite).spriteFrame = res;
+        });
+        this.state = !this.state;
     },
     // 创建关卡砖块
     createBrick() {
@@ -72,7 +87,7 @@ cc.Class({
     },
     // 设置托盘拖拽
     dragMove(event) {
-        // if (Global.gameData.over) return;
+        if (Global.gameInfo.over) return;
         let locationv = event.getLocation();
         let location = this.wallBox.convertToNodeSpaceAR(locationv);
         // 不移出屏幕
@@ -90,7 +105,7 @@ cc.Class({
 
     onLoad () {
         Global.game = this;
-        
+        Global.gameInfo.over = false;
         // 碰撞系统（不需要）
         // const managerCollis = cc.director.getCollisionManager();
         // managerCollis.enabled = true;
@@ -112,6 +127,8 @@ cc.Class({
 
     start() {
         this.onDrag();
+        // 游戏暂停状态
+        this.state = false;
     },
 
     // update (dt) {},
