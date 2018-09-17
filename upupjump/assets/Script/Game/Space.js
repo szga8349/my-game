@@ -23,16 +23,31 @@ cc.Class({
             default: null,
             type: cc.Node
         },
-        // 跳板
-        plate: {
-            default: null,
-            type: cc.Prefab
-        },
         // 道具
         rocket: {
             default: null,
             type: cc.Prefab
+        },
+        // 黑洞
+        blackHole: {
+            default: null,
+            type: cc.Node
+        },
+        bmg: {
+            default: null,
+            type: cc.AudioClip
         }
+    },
+    // 创建一个新的跳板节点
+    newPlate() {
+        let plate = new cc.Node('plate');
+        let sp = plate.addComponent(cc.Sprite);
+        plate.height = 10;
+        plate.y = this.plateMinHeight;
+        sp.sizeMode = 0; // CUSTOM
+        // 图片加载
+        cc.loader.loadRes('white', cc.SpriteFrame, (err, res) => sp.spriteFrame = res);
+        return plate;
     },
     // 创建道具
     creatProp() {
@@ -45,21 +60,11 @@ cc.Class({
         const spacing = Global.gameInfo.distance;
         const mapWidth = this.map.width;
         const lineNum = 5;
-        this.plateMinHeight = 0;
+        // 设置一个跳板容器的实际高度
+        this.plateMinHeight = 10;
 
-        // let plate = cc.instantiate(this.plate);
-        // plate.getComponent(cc.BoxCollider).destroy();
-        // plate.getComponent('Plate').destroy();
-
-        // console.log(plate);
-        
         let single = () => {
-            let plate = cc.instantiate(this.plate);
-            // 这里清除掉的组件还是会执行（后续要换掉）
-            plate.getComponent(cc.BoxCollider).destroy();
-            plate.getComponent('Plate').destroy();
-            plate.space = true;
-            plate.y = this.plateMinHeight;
+            let plate = this.newPlate();
             // 输出道具到跳板上
             let prop = cc.instantiate(this.rocket);
             prop.parent = plate;
@@ -78,7 +83,7 @@ cc.Class({
             plate.x = _x * (mapWidth / lineNum) + mapWidth / (lineNum * 2);
             // console.log('随机数', _x, '偏移值', plate.x);
 
-            let type = parseInt((Global.gameInfo.level + 3) * Math.random());
+            let type = parseInt(8 * Math.random());
             switch (type) {
                 case 7:
                     // 踩一次就消失 
@@ -100,6 +105,10 @@ cc.Class({
                     plate.name = 'plate-3';
                     plate.color = cc.hexToColor('#4141ff');
                     break;
+                default:
+                    plate.name = 'plate-1';
+                    plate.color = cc.hexToColor('#FFD600');
+                    break;
             }
             // 输出到对应容器
             plate.parent = this.map;
@@ -112,6 +121,12 @@ cc.Class({
         let finished = cc.callFunc(() => {
             this.startPlayer = true;
             this.prompt.destroy();
+            cc.audioEngine.play(this.bmg, false);
+            let action = cc.moveBy(10, 0, -(this.plateMinHeight + this.node.height));
+            this.map.runAction(action);
+            this.scheduleOnce(() => {
+                this.spaceEnd();
+            }, 10);
         }, this);
         let spa = cc.spawn(cc.fadeOut(0.2), cc.scaleTo(0.4, 1));
         let seq = cc.sequence(
@@ -123,7 +138,21 @@ cc.Class({
             cc.scaleTo(0.4, 1), cc.callFunc(() => { this.prompt.getComponent(cc.Label).string = 'GO'; }, this),
             cc.scaleTo(0.2, 2),
             spa, finished);
-        this.prompt.runAction(seq); 
+        this.prompt.runAction(seq);
+    },
+    // 狂热模式结束
+    spaceEnd() {
+        Global.gameInfo.state = 'space';
+        this.startPlayer = false;
+        let spawn = cc.spawn(cc.fadeIn(0.3), cc.scaleTo(0.7, 1), cc.rotateBy(2, 720));
+        // let seq = cc.sequence(spawn, cc.scaleTo(0.1, 0.5), cc.scaleTo(0.3, 1));
+        spawn.easing(cc.easeInOut(3.0));
+        this.blackHole.runAction(spawn);
+        this.player.runAction(cc.spawn(cc.moveTo(1, this.blackHole.x, this.blackHole.y), cc.scaleTo(1, 0)));
+        this.scheduleOnce(() => {
+            console.log('Space', Global.gameInfo);
+            cc.director.loadScene('Game');
+        }, 1);
     },
     // 进度条更新
     checkProgress(num = 0) {
@@ -156,13 +185,17 @@ cc.Class({
     },
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
+    onLoad() {
+        Global.space = this;
         this.checkProgress();
         this.readyGo();
         this.creatProp();
+        //碰撞系统
+        const managerCollis = cc.director.getCollisionManager();
+        managerCollis.enabled = true;
     },
 
-    start () {
+    start() {
         this.node.on('touchmove', this.dragMove, this);
     },
 

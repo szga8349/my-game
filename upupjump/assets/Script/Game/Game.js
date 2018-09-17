@@ -32,6 +32,10 @@ cc.Class({
         upper: {
             default: null,
             type: cc.Node
+        },
+        giaogiao: {
+            default: null,
+            type: cc.AudioClip
         }
     },
     // 进度条更新
@@ -43,6 +47,7 @@ cc.Class({
         val.string = parseInt(Global.gameInfo.progressVal / 10);
         // 满加速提示
         if (Global.gameInfo.progressVal == 10) {
+            this.touchNum = 0;
             // 提示文字
             let action = cc.sequence(
                 cc.fadeIn(0.2), 
@@ -65,9 +70,8 @@ cc.Class({
     // 重玩
     playAgain() {
         // 重置所有参数
-        Global.gameInfo.level = 6;
-        Global.gameInfo.plateMinHeight = 0;
-        Global.gameInfo.topScore = 0;
+        Global.gameInfo.level = 1;
+        Global.gameInfo.spaceScore = 0;
         Global.gameInfo.progressVal = 0;
         Global.gameInfo.state = null;
         cc.director.loadScene('Game');
@@ -79,11 +83,21 @@ cc.Class({
         Global.gameInfo.over = false;
         this.coverStart.destroy();
         let playerjs = this.player.getComponent('Player');
-        if (Global.gameInfo.state != 'space') playerjs.creatBlackHole();
-        // 每20秒出现一次黑洞
+        if (Global.gameInfo.first) {
+            Global.gameInfo.first = false;
+            playerjs.creatBlackHole(2);
+        }
+        playerjs.creatDragonfly();
+        // 每1分钟出现一次黑洞
         this.schedule(() => {
-            playerjs.creatBlackHole();
-        }, 20);
+            cc.log('每1分钟出现一次黑洞');
+            if (!this.node.getChildByName('map').getChildByName('black_hole')) playerjs.creatBlackHole();
+        }, 60);
+        // 每30秒出现一次黑洞
+        this.schedule(() => {
+            if (!this.node.getChildByName('map').getChildByName('dragonfly')) playerjs.creatDragonfly();
+        }, 30);
+        
     },
     // 拖拽移动
     dragMove(event) {
@@ -99,9 +113,10 @@ cc.Class({
         // 上滑处理
         this.touchNum += delta.y;
         let playerjs = this.player.getComponent('Player');
-        if (this.touchNum > 300 && Global.gameInfo.progressVal >= 10 && !playerjs.actionMove) {
+        if (this.touchNum > 200 && Global.gameInfo.progressVal >= 10 && !playerjs.actionMove) {
             // 设备震动
             if (window.wx) wx.vibrateShort(); cc.log('上滑');
+            cc.audioEngine.play(this.giaogiao, false);
             // 动画加速
             playerjs.actionMove = true;
             Global.game.bounce = 60;
@@ -116,9 +131,42 @@ cc.Class({
             right.runAction(spawnToLeft);
 
             // 设置上升动画
-            let upMove = cc.moveBy(14, 0, 6000);
+            let upMove = cc.moveBy(14, 0, 10000);
             upMove.easing(cc.easeExponentialOut());
 
+            // 整个屏幕震动
+            let action = cc.sequence(
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30),
+                cc.moveBy(0.1, 30, 30),
+                cc.moveBy(0.1, -30, -30)
+                );
+            this.node.runAction(action);
+                
             this.scheduleOnce(() => {
                 // 左右两边动画结束
                 let spawnToLeft2 = cc.spawn(cc.moveBy(0.3, -100, 0), cc.fadeOut(0.3));
@@ -149,14 +197,23 @@ cc.Class({
         // managerCollis.enabledDebugDraw = true;
         // managerCollis.enabledDrawBoundingBox = true;
         
-        // 重置进度条数值
-        Global.gameInfo.progressVal = 0;
         // 跳板的起始高度
         Global.gameInfo.plateMinHeight = Math.abs(this.player.y) - 40;
+        // 重置分数
+        Global.gameInfo.topScore = 0;
+        console.log('跳板的起始高度', Global.gameInfo.plateMinHeight);
+        
         // 输出跳板
         this.player.getComponent('Player').creatPlate(true);
-
-        this.checkProgress(8);
+        // 第一次玩的话给他8个道具充能
+        if (Global.gameInfo.first) this.checkProgress(8);
+        // 狂热模式回来的处理
+        if (Global.gameInfo.state == 'space') {
+            this.checkProgress();
+            this.player.getComponent('Player').setScore();
+            this.coverStart.getChildByName('text').getComponent(cc.Label).string = '点击屏幕继续giao起来！';
+        }
+        
     },
 
     start () {
@@ -165,7 +222,6 @@ cc.Class({
             this.touchNum = 0;
         }, this);
         this.node.on('touchmove', this.dragMove, this);
-        
     },
 
     update (dt) {

@@ -4,12 +4,15 @@ module.exports = {
         over: true,     // 游戏结束状态
         state: null,    // 游戏状态  normal / space /
 
-        topScore: 0,        // 跳跃的高度    
+        topScore: 0,        // 跳跃的高度  
+        spaceScore: 0,      // 跳转狂热模式下储存的值
         plateMinHeight: 0,  // 添加跳板的起始高度
-        progressVal: 8,     // 道具收集进度条
-        level: 6,           // 难度系数   
+        progressVal: 0,     // 道具收集状态
+        level: 1,           // 难度系数   
         distance: 300,      // 弹跳的高度
         speed: 0.2,         // 弹跳的速度（要和 player 的碰撞体积做相应的增大）
+
+        first: true         // 是否第一次玩
     },
     // 格式化单位数值
     numFormat(num) {

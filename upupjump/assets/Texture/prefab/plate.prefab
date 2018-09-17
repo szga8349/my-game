@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "plate-1",
+    "_name": "plate",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -77,7 +77,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "a23235d1-15db-4b95-8439-a2e005bfff91"
+      "__uuid__": "87e4be5f-2c8b-4c36-a2ee-cd4412048bd2"
     },
     "_type": 0,
     "_sizeMode": 0,

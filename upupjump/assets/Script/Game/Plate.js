@@ -20,25 +20,25 @@ cc.Class({
     // 
     plateMove() {
         switch (this.node.name) {
-            case 'plate-7':
-                let seq7 = cc.sequence(cc.moveBy(0.2, 0, 20), cc.moveBy(0.2, 0, -20));
-                this.node.runAction(cc.repeatForever(seq7));
-                break; 
-            case 'plate-6':
+            case 'plate-lr':
                 let _width = Global.game.node.getChildByName('map').width / 2;
-                let sqr6 = null;
+                let sqr7 = null;
                 if (this.node.x > _width) {
-                    sqr6 = cc.sequence(cc.moveBy(1, -_width, 0), cc.moveBy(1, _width, 0));
+                    sqr7 = cc.sequence(cc.moveBy(1, -_width, 0), cc.moveBy(1, _width, 0));
                 } else {
-                    sqr6 = cc.sequence(cc.moveBy(1, _width, 0), cc.moveBy(1, -_width, 0));
+                    sqr7 = cc.sequence(cc.moveBy(1, _width, 0), cc.moveBy(1, -_width, 0));
                 }
-                // sqr6.easing(cc.easeExponentialOut());
-                sqr6.easing(cc.easeInOut(3.0));
+                // sqr7.easing(cc.easeExponentialOut());
+                sqr7.easing(cc.easeInOut(3.0));
                 
-                this.node.runAction(cc.repeatForever(sqr6));
+                this.node.runAction(cc.repeatForever(sqr7));
                 break;
+            case 'plate-one':
+                let seq6 = cc.sequence(cc.moveBy(0.2, 0, 20), cc.moveBy(0.2, 0, -20));
+                this.node.runAction(cc.repeatForever(seq6));
+                break; 
             case 'plate-5':
-                let seq5 = cc.sequence(cc.rotateTo(0.1, 180), cc.rotateTo(0.1, 360));
+                let seq5 = cc.sequence(cc.rotateTo(0.1, 20), cc.rotateTo(0.1, -20));
                 this.node.runAction(cc.repeatForever(seq5));
                 break;
             case 'plate-3':
@@ -51,11 +51,8 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        if (!this.node.space) {
-            this.plateMove();
-            this.creatRocket();
-        }
-        
+        this.plateMove();
+        this.creatRocket();
     },
 
     start () {

@@ -22,22 +22,60 @@ cc.Class({
         blackHole: {
             default: null,
             type: cc.Prefab
+        },
+        // 竹蜻蜓
+        dragonfly: {
+            default: null,
+            type: cc.Prefab
+        },
+        // 音效
+        yigui: {
+            default: null,
+            type: cc.AudioClip
+        },
+        yaho: {
+            default: null,
+            type: cc.AudioClip
+        },
+        wodigiao: {
+            default: null,
+            type: cc.AudioClip
+        },
+        beibang: {
+            default: null,
+            type: cc.AudioClip
+        },
+        giao: {
+            default: null,
+            type: cc.AudioClip
+        },
+        hoho: {
+            default: null,
+            type: cc.AudioClip
         }
     },
+    // 创建竹蜻蜓
+    creatDragonfly() {
+        let dragonfly = cc.instantiate(this.dragonfly);
+        let _x = parseInt((this.map.width - dragonfly.width) * Math.random()) + dragonfly.width / 2;
+        dragonfly.x = _x;
+        dragonfly.y = Global.gameInfo.plateMinHeight - 150;
+        dragonfly.parent = this.map;
+    },
     // 制造黑洞
-    creatBlackHole() {
+    creatBlackHole(num = 1) {
         let blackHole = cc.instantiate(this.blackHole);
         blackHole.x = this.map.width / 2;
-        blackHole.y = Global.gameInfo.plateMinHeight - 200;
-        let seq = cc.sequence(cc.scaleTo(0.2, 1.2, 0.8), cc.scaleTo(0.2, 0.8, 1.2));
-        var action = cc.repeatForever(seq);
+        blackHole.y = Global.gameInfo.plateMinHeight * num - 200;
+        // let seq = cc.sequence(cc.rotateBy(0.2, 180), cc.rotateBy(0.2, 180));
+        var action = cc.repeatForever(cc.rotateBy(0.2, 180));
         blackHole.runAction(action);
         blackHole.parent = this.map;
     },
     // 更改分数
     setScore() {
-        Global.gameInfo.topScore = this.node.y;
-        this.scoreLabel.getComponent(cc.Label).string = Global.numFormat(Global.gameInfo.topScore);
+        Global.gameInfo.topScore = this.node.y > 0 ? this.node.y : 0;
+        this.scoreLabel.getComponent(cc.Label).string = Global.numFormat(Global.gameInfo.topScore + Global.gameInfo.spaceScore);
         if (!this.labelMove) {
             this.labelMove = true;
             let action = cc.scaleTo(0.3, 1.5);
@@ -54,14 +92,17 @@ cc.Class({
         let single = () => {
             let plate = cc.instantiate(this.plate);
             plate.y = Global.gameInfo.plateMinHeight;
-
+            let type = 0;
             // 随难度系数缩短跳板
             if (Global.gameInfo.level <= 4) {
                 plate.width = plate.getComponent(cc.BoxCollider).size.width = 160;
+                type = parseInt(6 * Math.random());
             } else if (Global.gameInfo.level > 4 && Global.gameInfo.level <= 8) {
                 plate.width = plate.getComponent(cc.BoxCollider).size.width = 130;
+                type = parseInt(7 * Math.random());
             } else if (Global.gameInfo.level > 8) {
                 plate.width = plate.getComponent(cc.BoxCollider).size.width = 100;
+                type = parseInt(8 * Math.random());
             }
 
             // 随机左右位置
@@ -69,17 +110,16 @@ cc.Class({
             plate.x = _x * (mapWidth / lineNum) + mapWidth / (lineNum * 2);
             // console.log('随机数', _x, '偏移值', plate.x);
             
-            let type = parseInt((Global.gameInfo.level + 3) * Math.random());
             switch (type) {
                 case 7: 
-                    // 踩一次就消失 
-                    plate.name = 'plate-7';
-                    plate.color = cc.hexToColor('#000000');
+                    // 左右移动
+                    plate.name = 'plate-lr';
+                    plate.color = cc.hexToColor('#ff41d5');
                     break;
                 case 6: 
-                    // 左右移动
-                    plate.name = 'plate-6';
-                    plate.color = cc.hexToColor('#ff41d5');
+                    // 踩一次就消失 
+                    plate.name = 'plate-one';
+                    plate.color = cc.hexToColor('#000000');
                     break;
                 case 5: 
                     // 5倍高度 
@@ -91,9 +131,10 @@ cc.Class({
                     plate.name = 'plate-3';
                     plate.color = cc.hexToColor('#4141ff');
                     break;
-                // default:
-                    
-                //     break;
+                default:
+                    plate.name = 'plate-1';
+                    plate.color = cc.hexToColor('#FFD600');
+                    break;
             }
             // 输出到对应容器
             plate.parent = this.map;
@@ -108,7 +149,7 @@ cc.Class({
         }
         for (let i = 0; i < 10; i++) single();
         // 难度系数上升
-        Global.gameInfo.level = Global.gameInfo.level < 7 ? Global.gameInfo.level + 1 : 7;
+        Global.gameInfo.level = Global.gameInfo.level < 3 ? Global.gameInfo.level + 1 : 3;
         
         let plates = this.map.children;
         if (plates.length > 30) {
@@ -129,10 +170,33 @@ cc.Class({
                 Global.game.bounce = Global.gameInfo.distance;
             }
         } 
+        // 吃到竹蜻蜓
+        else if (str == 'dragonfly') {
+            if (this.actionMove) return;
+            this.actionMove = true;
+            other.node.destroy();
+            Global.game.bounce = 60;
+            cc.audioEngine.play(this.beibang, false);
+            // 竹蜻蜓动画
+            let fly = this.node.getChildByName('dragonfly');
+            let down = cc.spawn(cc.moveBy(0.3, 0, -100), cc.fadeIn(0.2));
+            let top = cc.spawn(cc.moveBy(0.3, 0, 100), cc.fadeOut(0.2));
+            fly.runAction(down);
+            // 主角动画
+            let action = cc.moveBy(2, 0, 3000);
+            action.easing(cc.easeInOut(2.0));
+            this.node.runAction(action);
+
+            this.scheduleOnce(() => {
+                this.actionMove = false;
+                fly.runAction(top);
+            }, 2);
+        }
         // 吃到道具
         else if (str == 'rocket') {
-            Global.game.checkProgress(1);
             other.node.destroy();
+            Global.game.checkProgress(1);
+            cc.audioEngine.play(this.hoho, false);
         } 
         // 碰到黑洞
         else if (str == 'black_hole') {
@@ -140,6 +204,7 @@ cc.Class({
             this.node.stopAllActions();
             Global.gameInfo.over = true;
             Global.gameInfo.state = 'space';
+            Global.gameInfo.spaceScore = Global.gameInfo.topScore;
             // 动画回调
             let finished = cc.callFunc(() => {
                 cc.log('进入黑洞模式');
@@ -164,13 +229,15 @@ cc.Class({
             switch (str) {
                 case 'plate-3':
                     Global.game.bounce = Global.gameInfo.distance * 1.5;
+                    cc.audioEngine.play(this.yaho, false);
                     break;
                 case 'plate-5':
+                    cc.audioEngine.play(this.wodigiao, false);
                     // 动画加速
                     this.actionMove = true;
                     Global.game.bounce = 60;
 
-                    let upMove = cc.moveBy(7, 0, 3000);
+                    let upMove = cc.moveBy(8, 0, 3000);
                     // upMove.easing(cc.easeElasticOut(3.0));
                     // upMove.easing(cc.easeExponentialOut());
                     // upMove.easing(cc.easeBezierAction(0, 0, .47, .99));
@@ -186,12 +253,13 @@ cc.Class({
 
                     // Global.game.bounce = Global.gameInfo.distance * 5;  // 匀速
                     break;
-                case 'plate-7':
+                case 'plate-one':
                     Global.game.bounce = Global.gameInfo.distance;
                     other.node.destroy();
                     break;
                 default :
                     Global.game.bounce = Global.gameInfo.distance;
+                    cc.audioEngine.play(this.giao, false);
                     break;
             }
             Global.gameInfo.state = 'normal';
@@ -199,13 +267,13 @@ cc.Class({
     },
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad() {
-        
-    },
+    // onLoad() { 
+
+    // },
     
-    start() {
+    // start() {
         
-    },
+    // },
 
     update(dt) {
         if (Global.gameInfo.over) return;

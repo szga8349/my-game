@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "black_hole",
+    "_name": "dragonfly",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -46,8 +46,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 140,
-      "height": 140
+      "width": 108,
+      "height": 100.5
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -55,8 +55,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 320,
-      "y": 1018
+      "x": 368,
+      "y": 867
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -74,7 +74,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "76ea963f-aaae-4624-ba37-857c2c1f0bd7"
+      "__uuid__": "ceaf1ea0-0685-4a0d-af2e-1e8ea551ce42"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -107,8 +107,8 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 140,
-      "height": 140
+      "width": 108,
+      "height": 100.5
     }
   },
   {
@@ -117,9 +117,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "af8abc10-3de9-471e-b324-82c0de31f3b0"
+      "__id__": 0
     },
-    "fileId": "cdxXGUn3NCjK8bRrLCrZkF",
+    "fileId": "afjtb8HlxKi4MvKMrZTeVO",
     "sync": false
   }
 ]
