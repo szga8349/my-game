@@ -4,8 +4,20 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        
+        rocket: {
+            default: null,
+            type: cc.Prefab
+        }
     },
+    // 生成道具
+    creatRocket() {
+        let num = parseInt(5 * Math.random());
+        if (num == 3) {
+            let prop = cc.instantiate(this.rocket);
+            prop.parent = this.node;
+        }
+    },
+    // 
     plateMove() {
         switch (this.node.name) {
             case 'plate-7':
@@ -20,7 +32,9 @@ cc.Class({
                 } else {
                     sqr6 = cc.sequence(cc.moveBy(1, _width, 0), cc.moveBy(1, -_width, 0));
                 }
-                sqr6.easing(cc.easeExponentialOut(3.0));
+                // sqr6.easing(cc.easeExponentialOut());
+                sqr6.easing(cc.easeInOut(3.0));
+                
                 this.node.runAction(cc.repeatForever(sqr6));
                 break;
             case 'plate-5':
@@ -37,7 +51,11 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        this.plateMove();
+        if (!this.node.space) {
+            this.plateMove();
+            this.creatRocket();
+        }
+        
     },
 
     start () {

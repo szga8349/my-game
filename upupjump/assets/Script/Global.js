@@ -6,21 +6,14 @@ module.exports = {
 
         topScore: 0,        // 跳跃的高度    
         plateMinHeight: 0,  // 添加跳板的起始高度
-        
-        level: 1,           // 难度系数   
+        progressVal: 8,     // 道具收集进度条
+        level: 6,           // 难度系数   
         distance: 300,      // 弹跳的高度
-        baseVal: 40,        // 基础弹跳数值
         speed: 0.2,         // 弹跳的速度（要和 player 的碰撞体积做相应的增大）
     },
     // 格式化单位数值
     numFormat(num) {
-        let result = num >= 1000 ? num / 1000 : num;
-        if (num >= 1000) {
-            result = ((num / 1000).toString()).indexOf('.') != -1 ? (num / 1000).toFixed(1) : num / 1000;
-            result = result + 'km';
-        } else {
-            result = parseInt(num) + 'm'
-        }
+        let result = parseInt(num) + 'm';
         return result;
     },
     shareInfo: {
