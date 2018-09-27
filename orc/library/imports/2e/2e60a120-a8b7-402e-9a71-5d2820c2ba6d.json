@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "revival",
+    "texture": "22b67d16-cbec-451f-ab45-7fa323562bb2",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      200,
+      88
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      200,
+      88
+    ]
+  }
+}

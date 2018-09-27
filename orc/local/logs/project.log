@@ -1,0 +1,86 @@
+2018-09-27T09:39:01.932Z - normal: Load ~/.CocosCreator/settings.json
+2018-09-27T09:39:01.932Z - normal: checking language setting...
+2018-09-27T09:39:01.932Z - normal: Language: zh
+2018-09-27T09:39:03.980Z - success: protocol editor-framework registered
+2018-09-27T09:39:03.980Z - success: protocol app registered
+2018-09-27T09:39:03.980Z - success: protocol theme registered
+2018-09-27T09:39:03.980Z - success: protocol packages registered
+2018-09-27T09:39:03.980Z - success: protocol unpack registerred
+2018-09-27T09:39:03.980Z - success: protocol disable-commonjs registerred
+2018-09-27T09:39:04.240Z - normal: connected!
+2018-09-27T09:39:04.242Z - normal: Check project X:\game-demo\orc
+2018-09-27T09:39:04.243Z - normal: Initializing project X:\game-demo\orc
+2018-09-27T09:39:04.264Z - normal: Initializing Cocos2d
+2018-09-27T09:39:06.069Z - normal: Initializing Asset Database
+2018-09-27T09:39:06.131Z - success: protocol uuid registerred
+2018-09-27T09:39:06.131Z - success: protocol db registerred
+2018-09-27T09:39:06.131Z - success: protocol thumbnail registerred
+2018-09-27T09:39:06.131Z - normal: Loading editor/builtin packages
+2018-09-27T09:39:06.319Z - success: assets loaded
+2018-09-27T09:39:06.319Z - success: builder loaded
+2018-09-27T09:39:06.319Z - success: cocos-analytics loaded
+2018-09-27T09:39:06.319Z - success: console loaded
+2018-09-27T09:39:06.350Z - success: fb-instant-games loaded
+2018-09-27T09:39:06.368Z - success: hierarchy loaded
+2018-09-27T09:39:06.369Z - success: inspector loaded
+2018-09-27T09:39:06.369Z - success: keystore loaded
+2018-09-27T09:39:06.369Z - success: node-library loaded
+2018-09-27T09:39:06.401Z - success: package-asset loaded
+2018-09-27T09:39:06.401Z - success: preferences loaded
+2018-09-27T09:39:06.401Z - success: project-exporter loaded
+2018-09-27T09:39:06.418Z - success: project-importer loaded
+2018-09-27T09:39:06.418Z - success: project-settings loaded
+2018-09-27T09:39:06.418Z - success: ui-kit loaded
+2018-09-27T09:39:06.418Z - success: scene loaded
+2018-09-27T09:39:06.418Z - success: sprite-editor loaded
+2018-09-27T09:39:06.434Z - success: store loaded
+2018-09-27T09:39:06.434Z - success: timeline loaded
+2018-09-27T09:39:06.434Z - normal: Loading builtin packages
+2018-09-27T09:39:06.532Z - success: asset-db-debugger loaded
+2018-09-27T09:39:06.563Z - success: code-editor loaded
+2018-09-27T09:39:06.563Z - success: color-picker loaded
+2018-09-27T09:39:06.598Z - success: package-manager loaded
+2018-09-27T09:39:06.598Z - success: qqplay-adapter loaded
+2018-09-27T09:39:06.664Z - success: sdkbox loaded
+2018-09-27T09:39:06.682Z - success: tester loaded
+2018-09-27T09:39:06.682Z - success: ui-grid loaded
+2018-09-27T09:39:06.698Z - success: ui-kit-preview-extra loaded
+2018-09-27T09:39:06.714Z - success: ui-kit-preview loaded
+2018-09-27T09:39:06.731Z - success: ui-tree loaded
+2018-09-27T09:39:06.732Z - success: weapp-adapter loaded
+2018-09-27T09:39:08.226Z - normal: Loading packages
+2018-09-27T09:39:08.233Z - normal: Watching packages
+2018-09-27T09:39:08.694Z - normal: Run Application
+2018-09-27T09:39:10.633Z - success: preview server running at http://localhost:7456
+2018-09-27T09:45:53.872Z - warn: The Asset used by component "cc.Sprite" in scene "Home.fire" is missing. Detailed information:
+Node path: "Canvas/bg-2"
+Asset url: "db://assets/Scene/Home.fire"
+Missing uuid: "a9ebda16-f2ec-4cc1-a35d-160a2b3670a3"
+
+2018-09-27T10:10:23.267Z - error: TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The provided value is not of type '(CSSImageValue or HTMLImageElement or HTMLVideoElement or HTMLCanvasElement or ImageBitmap or OffscreenCanvas)'
+    at HTMLElement.repaint (file:///X:/%E8%BD%AF%E4%BB%B6/CocosCreator/resources/app.asar/editor/builtin/sprite-editor/panel/sprite-editor.js:1:4548)
+    at HTMLElement.resize (file:///X:/%E8%BD%AF%E4%BB%B6/CocosCreator/resources/app.asar/editor/builtin/sprite-editor/panel/sprite-editor.js:1:3558)
+    at HTMLElement.<anonymous> (file:///X:/%E8%BD%AF%E4%BB%B6/CocosCreator/resources/app.asar/editor/builtin/sprite-editor/panel/sprite-editor.js:1:1096)
+2018-09-27T11:12:24.651Z - error: TypeError: Cannot read property 'dispose' of null
+    at call__preloadInTryCatch (eval at misc.tryCatchFunctor_EDITOR (X:\软件\CocosCreator\resources\engine\cocos2d\core\utils\misc.js:1:1), <anonymous>:8:20)
+    at CCClass._invoke (X:\软件\CocosCreator\resources\engine\cocos2d\core\component-scheduler.js:234:21)
+    at CCClass.invoke (X:\软件\CocosCreator\resources\engine\cocos2d\core\node-activator.js:66:14)
+    at CCClass.activateNode (X:\软件\CocosCreator\resources\engine\cocos2d\core\node-activator.js:226:26)
+    at cc_Node._onHierarchyChanged (X:\软件\CocosCreator\resources\engine\cocos2d\core\utils\base-node.js:1109:40)
+    at cc_Node._onHierarchyChanged (X:\软件\CocosCreator\resources\engine\cocos2d\core\CCNode.js:1116:14)
+    at cc_Node.setParent (X:\软件\CocosCreator\resources\engine\cocos2d\core\utils\base-node.js:415:18)
+    at Object.restoreDeleteNode (X:\软件\CocosCreator\resources\app.asar\editor\page\scene-utils\undo\scene-undo-impl.js:1:4740)
+    at DeleteNodesCommand.undo (X:\软件\CocosCreator\resources\app.asar\editor\page\scene-utils\undo\index.js:1:2725)
+2018-09-27T11:12:24.657Z - error: TypeError: Cannot read property 'node' of null
+    at initializer.parent (X:\软件\CocosCreator\resources\app.asar\node_modules\svg.js\dist\svg.js:1156:19)
+    at HTMLImageElement.img.onload (X:\软件\CocosCreator\resources\app.asar\node_modules\svg.js\dist\svg.js:3508:22)
+2018-09-27T11:12:24.865Z - error: TypeError: Cannot read property 'dispose' of null
+    at callonDestroyInTryCatch (eval at misc.tryCatchFunctor_EDITOR (X:\软件\CocosCreator\resources\engine\cocos2d\core\utils\misc.js:1:1), <anonymous>:8:20)
+    at CCClass.destroyComp (X:\软件\CocosCreator\resources\engine\cocos2d\core\node-activator.js:327:17)
+    at dragonBones_ArmatureDisplay._onPreDestroy (X:\软件\CocosCreator\resources\engine\cocos2d\core\components\CCComponent.js:515:36)
+    at dragonBones_ArmatureDisplay.prototype._destroyImmediate (X:\软件\CocosCreator\resources\engine\cocos2d\core\platform\CCObject.js:472:14)
+    at cc_Node._onPreDestroy [as _onPreDestroyBase] (X:\软件\CocosCreator\resources\engine\cocos2d\core\utils\base-node.js:1237:23)
+    at cc_Node._onPreDestroy (X:\软件\CocosCreator\resources\engine\cocos2d\core\CCNode.js:1047:36)
+    at cc_Node.prototype._destroyImmediate (X:\软件\CocosCreator\resources\engine\cocos2d\core\platform\CCObject.js:472:14)
+    at cc_Node._onPreDestroy [as _onPreDestroyBase] (X:\软件\CocosCreator\resources\engine\cocos2d\core\utils\base-node.js:1230:25)
+    at cc_Node._onPreDestroy (X:\软件\CocosCreator\resources\engine\cocos2d\core\CCNode.js:1047:36)
