@@ -8,7 +8,26 @@ module.exports = {
     game: null,
     gameInfo: {
         state: 'over',
-        score: 0
+        // 衰减时候计算总数
+        countToatal: 0,
+        // 兽人总数
+        total: 20,
+        // 难度
+        level: 0,
+        // 炸弹箱子兽人生成时间(秒)
+        orcBoom: 6,
+        // 木板兽人生成(秒)
+        orcBoard: 5,
+        // 金币箱兽人生成(秒)
+        orcMoney: 10,
+        // 分数（距离）
+        score: 0,
+        // 复活接力分数
+        reviveScore: 0,
+        // 游戏中金币
+        money: 0,
+        // 最小兽人数量
+        minNumber: 10
     },
     shareInfo: {
         title: '',

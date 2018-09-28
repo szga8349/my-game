@@ -25,42 +25,42 @@
     "relativePath": "prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1538012459035,
+    "asset": 1538046791861,
     "meta": 1536727980750,
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1538012475465,
+    "asset": 1538046791879,
     "meta": 1536727980750,
     "relativePath": "Script"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
-    "asset": 1538036917350,
+    "asset": 1538046792010,
     "meta": 1536727980751,
     "relativePath": "Texture"
   },
   "6c7a59d5-647b-4d32-82b3-38c283c0b462": {
-    "asset": 1538046748120,
-    "meta": 1538046748143,
+    "asset": 1538116368917,
+    "meta": 1538116368940,
     "relativePath": "Scene\\Game.fire"
   },
   "d9834a95-ecfa-4733-9bf0-abf992c56693": {
-    "asset": 1537929963885,
+    "asset": 1538046791893,
     "meta": 1536728063860,
     "relativePath": "Script\\Game"
   },
   "39a33e8b-13b0-435c-ad1d-f837be8fb020": {
-    "asset": 1538040650218,
+    "asset": 1538119019442,
     "meta": 1536728111556,
     "relativePath": "Texture\\image"
   },
   "03fe5678-039e-41e3-bdaa-205f7ee5a8df": {
-    "asset": 1537960989476,
+    "asset": 1538119019561,
     "meta": 1536728203820,
     "relativePath": "Texture\\prefab"
   },
   "b1e8cb80-0453-4f0f-aa07-891545bb9072": {
-    "asset": 1536728309406,
+    "asset": 1538046791845,
     "meta": 1536728309411,
     "relativePath": "resources"
   },
@@ -75,8 +75,8 @@
     "relativePath": "Script\\Game\\Camera.js"
   },
   "a19de2b8-5fe2-4d69-aa3e-da2aa2e48ba7": {
-    "asset": 1538037182995,
-    "meta": 1538037183011,
+    "asset": 1538103391576,
+    "meta": 1538103391594,
     "relativePath": "Texture\\prefab\\orc.prefab"
   },
   "71561142-4c83-4933-afca-cb7a17f67053": {
@@ -305,7 +305,7 @@
     "relativePath": "Texture\\prefab\\board.prefab"
   },
   "a3101e16-1b38-4d03-917c-6952804cec9c": {
-    "asset": 1538015718009,
+    "asset": 1538046791925,
     "meta": 1537962236004,
     "relativePath": "Texture\\audio"
   },
@@ -330,8 +330,8 @@
     "relativePath": "Texture\\audio\\fail.mp3"
   },
   "3d569604-16ff-4bd0-92b1-faef42ef4392": {
-    "asset": 1538012749415,
-    "meta": 1538012749431,
+    "asset": 1538100943385,
+    "meta": 1538100943399,
     "relativePath": "Scene\\Logo.fire"
   },
   "1170b7a1-f871-47d8-920d-1a4abc4a9139": {
@@ -348,11 +348,6 @@
     "asset": 1538012742659,
     "meta": 1538012748582,
     "relativePath": "Script\\Logo.js"
-  },
-  "ccbdbcf8-c582-4eb4-975a-c7439e99a4ff": {
-    "asset": 1538014005955,
-    "meta": 1538015151337,
-    "relativePath": "Script\\Global.js"
   },
   "f149f4c0-b2f1-46a6-a465-dfd08f4efa84": {
     "asset": 1538013530040,
@@ -415,7 +410,7 @@
     "relativePath": "Texture\\image\\color-2.jpg"
   },
   "d678ef5b-1a6d-4a70-b211-d29b124f25fd": {
-    "asset": 1538040420275,
+    "asset": 1538046791938,
     "meta": 1538036917354,
     "relativePath": "Texture\\bones"
   },
@@ -504,14 +499,29 @@
     "meta": 1538043166534,
     "relativePath": "Texture\\image\\rank_res.jpg"
   },
+  "b625da21-7e3f-489b-99a0-b24eeda55ea7": {
+    "asset": 1538099795958,
+    "meta": 1538100145100,
+    "relativePath": "Texture\\image\\particle.png"
+  },
+  "846d4fa0-18c9-4137-861e-943fdabdfb23": {
+    "asset": 1538103383274,
+    "meta": 1538103383287,
+    "relativePath": "Texture\\prefab\\blood.prefab"
+  },
   "140e8615-fb9a-480e-b06e-2b7dfa84ae3f": {
-    "asset": 1538046571108,
-    "meta": 1538046572301,
+    "asset": 1538117349285,
+    "meta": 1538118248532,
     "relativePath": "Script\\Game\\Game.js"
   },
+  "ccbdbcf8-c582-4eb4-975a-c7439e99a4ff": {
+    "asset": 1538117583801,
+    "meta": 1538118248548,
+    "relativePath": "Script\\Global.js"
+  },
   "cb8ac049-dade-47db-a632-253c1236bab9": {
-    "asset": 1538046643785,
-    "meta": 1538046647328,
+    "asset": 1538118941507,
+    "meta": 1538118981626,
     "relativePath": "Script\\Game\\Ball.js"
   }
 }
