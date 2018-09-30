@@ -176,6 +176,11 @@ cc.Class({
             }
         }));
         this.ball.runAction(seq);
+        // 针对全面屏手机做的地板拉长
+        if (this.node.width >= 1500) {
+            cc.find('move-box/floor', this.wrap).width = 3600;
+            console.log('针对全面屏手机做的地板拉长');   
+        }
     },
     // 游戏结束
     gameOver() {
