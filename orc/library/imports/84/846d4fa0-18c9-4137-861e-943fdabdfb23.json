@@ -143,7 +143,7 @@
     },
     "_speed": 500,
     "_speedVar": 0,
-    "_tangentialAccel": 80,
+    "_tangentialAccel": 0,
     "_tangentialAccelVar": 5000,
     "_radialAccel": 0,
     "_radialAccelVar": 0,
@@ -162,7 +162,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "846d4fa0-18c9-4137-861e-943fdabdfb23"
     },
     "fileId": "3bm+cxLnRKQ4/k3nljxTho",
     "sync": false

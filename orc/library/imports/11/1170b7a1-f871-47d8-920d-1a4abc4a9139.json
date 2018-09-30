@@ -831,7 +831,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "rank_title",
+    "_name": "biaodai",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -845,7 +845,7 @@
       }
     ],
     "_prefab": null,
-    "_id": "aezjPxokFP841mU5EmCwVJ",
+    "_id": "005g6q18dMxrc9Q75CeuOe",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -890,10 +890,10 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "71f8cef3-1ddd-4b17-933a-884453efdb9f"
+      "__uuid__": "a134f1b1-aaf2-4dc1-b9ea-2de258a7e154"
     },
-    "_type": 0,
-    "_sizeMode": 1,
+    "_type": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -909,7 +909,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "revival",
+    "_name": "rank_title",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -923,7 +923,7 @@
       }
     ],
     "_prefab": null,
-    "_id": "283MyTUm5By5oJEnvdZ6gD",
+    "_id": "aezjPxokFP841mU5EmCwVJ",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -940,8 +940,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 200,
-      "height": 88
+      "width": 192,
+      "height": 62
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -949,8 +949,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -132.2,
-      "y": -295.1
+      "x": 0,
+      "y": 282
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -968,7 +968,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "2e60a120-a8b7-402e-9a71-5d2820c2ba6d"
+      "__uuid__": "71f8cef3-1ddd-4b17-933a-884453efdb9f"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1030,7 +1030,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 134.5,
+      "x": 0,
       "y": -294.2
     },
     "_skewX": 0,
@@ -1128,7 +1128,7 @@
       "__id__": 2
     },
     "component": "Rank",
-    "handler": "backGame",
+    "handler": "backHome",
     "customEventData": ""
   },
   {

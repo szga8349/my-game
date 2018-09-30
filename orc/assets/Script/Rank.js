@@ -21,6 +21,7 @@ cc.Class({
         cc.director.loadScene('Game');
     },
     backHome() {
+        if (window.wx) wx.postMessage({ action: 'hide' });
         cc.director.loadScene('Home');
     },
     // LIFE-CYCLE CALLBACKS:
@@ -57,7 +58,7 @@ cc.Class({
         this.sub.handleLoadedTexture();
         this.subBox.spriteFrame = new cc.SpriteFrame(this.sub);
     },
-    
+
     update (dt) {
         this.updaetSubDomainCanvas();
     },

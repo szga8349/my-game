@@ -1,54 +1,155 @@
-2018-09-28T07:17:30.483Z - normal: Load ~/.CocosCreator/settings.json
-2018-09-28T07:17:30.487Z - normal: checking language setting...
-2018-09-28T07:17:30.487Z - normal: Language: zh
-2018-09-28T07:17:32.126Z - success: protocol editor-framework registered
-2018-09-28T07:17:32.126Z - success: protocol app registered
-2018-09-28T07:17:32.126Z - success: protocol theme registered
-2018-09-28T07:17:32.126Z - success: protocol packages registered
-2018-09-28T07:17:32.126Z - success: protocol unpack registerred
-2018-09-28T07:17:32.126Z - success: protocol disable-commonjs registerred
-2018-09-28T07:17:32.432Z - normal: connected!
-2018-09-28T07:17:32.433Z - normal: Check project X:\code\my-game\orc
-2018-09-28T07:17:32.435Z - normal: Initializing project X:\code\my-game\orc
-2018-09-28T07:17:32.477Z - normal: Initializing Cocos2d
-2018-09-28T07:17:33.890Z - normal: Initializing Asset Database
-2018-09-28T07:17:33.965Z - success: protocol uuid registerred
-2018-09-28T07:17:33.965Z - success: protocol db registerred
-2018-09-28T07:17:33.966Z - success: protocol thumbnail registerred
-2018-09-28T07:17:33.966Z - normal: Loading editor/builtin packages
-2018-09-28T07:17:34.109Z - success: assets loaded
-2018-09-28T07:17:34.112Z - success: builder loaded
-2018-09-28T07:17:34.114Z - success: cocos-analytics loaded
-2018-09-28T07:17:34.117Z - success: console loaded
-2018-09-28T07:17:34.150Z - success: fb-instant-games loaded
-2018-09-28T07:17:34.156Z - success: hierarchy loaded
-2018-09-28T07:17:34.159Z - success: inspector loaded
-2018-09-28T07:17:34.160Z - success: keystore loaded
-2018-09-28T07:17:34.164Z - success: node-library loaded
-2018-09-28T07:17:34.178Z - success: package-asset loaded
-2018-09-28T07:17:34.179Z - success: preferences loaded
-2018-09-28T07:17:34.181Z - success: project-exporter loaded
-2018-09-28T07:17:34.198Z - success: project-importer loaded
-2018-09-28T07:17:34.200Z - success: project-settings loaded
-2018-09-28T07:17:34.209Z - success: ui-kit loaded
-2018-09-28T07:17:34.213Z - success: scene loaded
-2018-09-28T07:17:34.214Z - success: sprite-editor loaded
-2018-09-28T07:17:34.216Z - success: store loaded
-2018-09-28T07:17:34.221Z - success: timeline loaded
-2018-09-28T07:17:34.221Z - normal: Loading builtin packages
-2018-09-28T07:17:34.232Z - success: asset-db-debugger loaded
-2018-09-28T07:17:34.271Z - success: code-editor loaded
-2018-09-28T07:17:34.275Z - success: color-picker loaded
-2018-09-28T07:17:34.285Z - success: package-manager loaded
-2018-09-28T07:17:34.288Z - success: qqplay-adapter loaded
-2018-09-28T07:17:34.302Z - success: sdkbox loaded
-2018-09-28T07:17:34.326Z - success: tester loaded
-2018-09-28T07:17:34.343Z - success: ui-grid loaded
-2018-09-28T07:17:34.371Z - success: ui-kit-preview-extra loaded
-2018-09-28T07:17:34.380Z - success: ui-kit-preview loaded
-2018-09-28T07:17:34.387Z - success: ui-tree loaded
-2018-09-28T07:17:34.391Z - success: weapp-adapter loaded
-2018-09-28T07:17:35.543Z - normal: Loading packages
-2018-09-28T07:17:35.549Z - normal: Watching packages
-2018-09-28T07:17:35.913Z - normal: Run Application
-2018-09-28T07:17:37.916Z - success: preview server running at http://localhost:7456
+2018-09-30T06:44:39.906Z - normal: Load ~/.CocosCreator/settings.json
+2018-09-30T06:44:39.909Z - normal: checking language setting...
+2018-09-30T06:44:39.910Z - normal: Language: zh
+2018-09-30T06:44:44.524Z - success: protocol editor-framework registered
+2018-09-30T06:44:44.524Z - success: protocol app registered
+2018-09-30T06:44:44.524Z - success: protocol theme registered
+2018-09-30T06:44:44.524Z - success: protocol packages registered
+2018-09-30T06:44:44.524Z - success: protocol unpack registerred
+2018-09-30T06:44:44.525Z - success: protocol disable-commonjs registerred
+2018-09-30T06:44:44.731Z - normal: connected!
+2018-09-30T06:44:44.732Z - normal: Check project X:\game-demo\orc
+2018-09-30T06:44:44.734Z - normal: Initializing project X:\game-demo\orc
+2018-09-30T06:44:45.056Z - normal: Initializing Cocos2d
+2018-09-30T06:44:48.744Z - normal: Initializing Asset Database
+2018-09-30T06:44:48.912Z - success: protocol uuid registerred
+2018-09-30T06:44:48.912Z - success: protocol db registerred
+2018-09-30T06:44:48.912Z - success: protocol thumbnail registerred
+2018-09-30T06:44:48.912Z - normal: Loading editor/builtin packages
+2018-09-30T06:44:49.930Z - success: assets loaded
+2018-09-30T06:44:49.935Z - success: builder loaded
+2018-09-30T06:44:49.941Z - success: cocos-analytics loaded
+2018-09-30T06:44:49.989Z - success: console loaded
+2018-09-30T06:44:50.078Z - success: fb-instant-games loaded
+2018-09-30T06:44:50.084Z - success: hierarchy loaded
+2018-09-30T06:44:50.089Z - success: inspector loaded
+2018-09-30T06:44:50.091Z - success: keystore loaded
+2018-09-30T06:44:50.099Z - success: node-library loaded
+2018-09-30T06:44:50.101Z - success: package-asset loaded
+2018-09-30T06:44:50.121Z - success: preferences loaded
+2018-09-30T06:44:50.124Z - success: project-exporter loaded
+2018-09-30T06:44:50.164Z - success: project-importer loaded
+2018-09-30T06:44:50.166Z - success: project-settings loaded
+2018-09-30T06:44:50.169Z - success: ui-kit loaded
+2018-09-30T06:44:50.188Z - success: scene loaded
+2018-09-30T06:44:50.190Z - success: sprite-editor loaded
+2018-09-30T06:44:50.193Z - success: store loaded
+2018-09-30T06:44:50.217Z - success: timeline loaded
+2018-09-30T06:44:50.217Z - normal: Loading builtin packages
+2018-09-30T06:44:50.976Z - success: asset-db-debugger loaded
+2018-09-30T06:44:51.081Z - success: code-editor loaded
+2018-09-30T06:44:51.094Z - success: color-picker loaded
+2018-09-30T06:44:51.118Z - success: package-manager loaded
+2018-09-30T06:44:51.127Z - success: qqplay-adapter loaded
+2018-09-30T06:44:51.249Z - success: sdkbox loaded
+2018-09-30T06:44:51.298Z - success: tester loaded
+2018-09-30T06:44:51.339Z - success: ui-grid loaded
+2018-09-30T06:44:51.355Z - success: ui-kit-preview-extra loaded
+2018-09-30T06:44:51.389Z - success: ui-kit-preview loaded
+2018-09-30T06:44:51.397Z - success: ui-tree loaded
+2018-09-30T06:44:51.401Z - success: weapp-adapter loaded
+2018-09-30T06:45:08.081Z - normal: Loading packages
+2018-09-30T06:45:08.086Z - normal: Watching packages
+2018-09-30T06:45:08.910Z - normal: Run Application
+2018-09-30T06:45:16.663Z - success: preview server running at http://localhost:7456
+2018-09-30T06:51:30.914Z - normal: Introduced global variable while editing: i
+2018-09-30T06:51:30.915Z - normal: Introduced global variable while editing: l
+2018-09-30T07:08:57.726Z - normal: Introduced global variable while editing: i
+2018-09-30T07:08:57.727Z - normal: Introduced global variable while editing: l
+2018-09-30T07:17:55.845Z - normal: Introduced global variable while editing: i
+2018-09-30T07:17:55.846Z - normal: Introduced global variable while editing: l
+2018-09-30T08:11:57.633Z - normal: Start building with options : {
+  "actualPlatform": "Web Mobile",
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "X:\\game-demo\\orc\\build",
+  "debug": false,
+  "dest": "X:\\game-demo\\orc\\build\\web-mobile",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [
+    "TiledMap",
+    "ProgressBar",
+    "Toggle",
+    "PageView",
+    "PageViewIndicator",
+    "Slider",
+    "EditorBox",
+    "VideoPlayer",
+    "WebView",
+    "RichText",
+    "Graphics",
+    "Physics",
+    "Camera",
+    "Native NetWork"
+  ],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "web-mobile",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "renderMode": "0",
+  "scenes": [
+    "3d569604-16ff-4bd0-92b1-faef42ef4392",
+    "a2cff229-236c-4de4-a6d4-30732201ace4",
+    "6c7a59d5-647b-4d32-82b3-38c283c0b462",
+    "1170b7a1-f871-47d8-920d-1a4abc4a9139"
+  ],
+  "sourceMaps": false,
+  "startScene": "3d569604-16ff-4bd0-92b1-faef42ef4392",
+  "template": "link",
+  "title": "orc",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx7e07d11620f9b62d",
+    "isSubdomain": false,
+    "orientation": "landscape",
+    "subContext": ""
+  },
+  "xxteaKey": "03be6d72-a9a3-49",
+  "zipCompressJs": true,
+  "project": "X:\\game-demo\\orc",
+  "projectName": "orc",
+  "debugBuildWorker": false
+}
+2018-09-30T08:11:57.636Z - normal: Building X:\game-demo\orc
+2018-09-30T08:11:57.636Z - normal: Destination X:\game-demo\orc\build\web-mobile
+2018-09-30T08:11:58.444Z - normal: Delete X:\game-demo\orc\build\web-mobile\**\*
+2018-09-30T08:12:03.442Z - normal: Start building assets
+2018-09-30T08:12:03.442Z - normal: Start spawn build-worker
+2018-09-30T08:12:04.115Z - normal: Finish spawn build-worker
+2018-09-30T08:12:04.115Z - normal: Start init build-worker
+2018-09-30T08:12:08.877Z - normal: Finish init build-worker
+2018-09-30T08:12:08.877Z - normal: Start build-assets in worker
+2018-09-30T08:12:11.469Z - normal: Finish build-assets in worker
+2018-09-30T08:12:11.477Z - normal: Finish building assets
+2018-09-30T08:12:11.521Z - normal: Start building plugin scripts
+2018-09-30T08:12:11.558Z - normal: Generating main.js from X:\软件\CocosCreator\resources\static\build-templates\shares\main.js
+2018-09-30T08:12:11.602Z - normal: Generating html from X:\软件\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
+2018-09-30T08:12:11.621Z - normal: Built to "X:\game-demo\orc\build\web-mobile" successfully

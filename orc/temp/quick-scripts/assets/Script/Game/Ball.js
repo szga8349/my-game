@@ -25,12 +25,8 @@ cc.Class({
             default: null,
             type: cc.Node
         },
-        // 背景容器
-        // background: {
-        //     default: null,
-        //     type: cc.Node
-        // },
-        bg2: {
+        // 背景容器（canvas大小）
+        bgColor: {
             default: null,
             type: cc.Node
         },
@@ -64,14 +60,52 @@ cc.Class({
         moneyLabel: {
             default: null,
             type: cc.Label
+        },
+        // 掉落金币提示
+        moneyTip: {
+            default: null,
+            type: cc.Label
+        },
+        // 炸弹粒子
+        explodeBoom: {
+            default: null,
+            type: cc.Prefab
+        },
+        // 金币粒子
+        explodeGold: {
+            default: null,
+            type: cc.Prefab
         }
     },
+    // 掉落金币提示动画
+    moneyTipMove: function moneyTipMove(num) {
+        Global.userInfo.money += num;
+        this.moneyLabel.string = Global.userInfo.money;
+        this.moneyTip.string = '金币 +' + num;
+        var show = cc.spawn(cc.fadeIn(0.3), cc.scaleTo(0.3, 2, 2));
+        var stop = cc.scaleTo(0.5, 1, 1);
+        var hide = cc.spawn(cc.fadeOut(0.3), cc.scaleTo(0.3, 1, 1));
+        var seq = cc.sequence(show, stop, hide);
+        seq.easing(cc.easeOut(3.0));
+        this.moneyTip.node.runAction(seq);
+    },
+
 
     // 视觉缩放
     viewScale: function viewScale() {
-        // console.log(Global.game.wrap.scale);
-        if (this.node.y < 500) return;
-        Global.game.wrap.scale = (1110 - 600) / this.node.y;
+        var val = 500; // 正常弹起高度
+        if (this.node.y < val) return;
+
+        // 第一种（性能更好）
+        // Global.game.wrap.scale = val / this.node.y;
+
+        /**
+         * 第二种
+         * 75：球的半径
+         * 890：球弹起来的最大高度
+         */
+        var ss = 75 / (890 / this.node.y);
+        Global.game.wrap.scale = (val - ss) / this.node.y;
     },
 
 
@@ -87,11 +121,6 @@ cc.Class({
         transform(tree, 'tree');
         transform(floor, 'floor');
         transform(ground, 'ground');
-
-        // mountain.color = cc.hexToColor(colors[num].mountain);
-        // tree.color = cc.hexToColor(colors[num].tree);
-        // floor.color = cc.hexToColor(colors[num].floor);
-        // ground.color = cc.hexToColor(colors[num].ground);
     },
 
 
@@ -114,15 +143,16 @@ cc.Class({
             console.log('难度增加======>', Global.gameInfo.level);
 
             // 判断切换背景颜色
-            // console.log('========> 切换背景颜色');
             if (sun.opacity == 255) {
                 this.colorSwitch(mountain, tree, floor, ground, 1);
-                this.bg2.runAction(cc.fadeIn(0.3));
+                // this.bgColor.getChildByName('color-1').runAction(cc.fadeOut(0.3));
+                this.bgColor.getChildByName('color-2').runAction(cc.fadeIn(0.3));
                 sun.runAction(cc.fadeOut(0.3));
                 cloud.runAction(cc.fadeIn(0.3));
             } else {
                 this.colorSwitch(mountain, tree, floor, ground, 0);
-                this.bg2.runAction(cc.fadeOut(0.3));
+                this.bgColor.getChildByName('color-2').runAction(cc.fadeOut(0.3));
+                // this.bgColor.getChildByName('color-1').runAction(cc.fadeIn(0.3));
                 sun.runAction(cc.fadeIn(0.3));
                 cloud.runAction(cc.fadeOut(0.3));
             }
@@ -162,7 +192,7 @@ cc.Class({
         // 砸地板计数
         this.floorNum = num;
         // 背景移动速度
-        if (!bone) this.bg_speed = 16;
+        if (!bone) this.bg_speed = 16 * Global.gameInfo.startDash;
         // 衰减值
         this.value = 0.5;
         if (bone) {
@@ -175,12 +205,13 @@ cc.Class({
 
     // 撞到地板
     collisionFloor: function collisionFloor() {
+        if (window.wx) wx.vibrateShort();
         this.floorNum += 5;
         if (this.floorNum >= 25) {
+            // cc.log('游戏结束'); 
             Global.gameInfo.state = 'over';
             this.node.y = this.node.height / 2;
             this.bounce = 0;
-            cc.log('游戏结束');
             this.node.getChildByName('bone').getComponent(dragonBones.ArmatureDisplay).playAnimation('rockStop', 1);
             this.node.getChildByName('particle').getComponent(cc.ParticleSystem).stopSystem();
             Global.game.gameOver();
@@ -190,7 +221,7 @@ cc.Class({
 
         this.bg_speed = this.bg_speed / 2;
 
-        cc.log('撞到地面', this.floorNum);
+        // cc.log('撞到地面', this.floorNum);
 
         this.restData(this.floorNum, true);
         cc.audioEngine.play(this.audioFloor, false);
@@ -202,6 +233,7 @@ cc.Class({
         var _this = this;
 
         if (Global.gameInfo.state == 'over' || this.value <= 1 || this.isBoard) return;
+        if (window.wx) wx.vibrateShort();
         // console.log('衰减值=======>', this.value);
         if (this.bounce < 20 && !this.isBoard) this.bounce = 20; // 上升高度
 
@@ -231,13 +263,18 @@ cc.Class({
         var _this2 = this;
 
         if (Global.gameInfo.state == 'over' || this.value <= 1) return;
+        if (window.wx) wx.vibrateShort();
         if (this.bounce < 25) this.bounce = 25; // 上升高度
         node.destroy();
 
+        // 播放粒子
+        var boom = cc.instantiate(this.explodeGold);
+        boom.setPosition(node.x + 50, node.y + 50);
+        boom.parent = Global.game.map;
+
         // 金币更新
-        var num = parseInt(10 * Math.random()) + 10;
-        Global.gameInfo.money += num;
-        this.moneyLabel.string = Global.gameInfo.money;
+        var num = parseInt(50 * Math.random()) + 50;
+        this.moneyTipMove(num);
 
         this.scheduleOnce(function () {
             _this2.restData();
@@ -251,8 +288,15 @@ cc.Class({
         var _this3 = this;
 
         if (Global.gameInfo.state == 'over' || this.value <= 1) return;
+        Global.game.nodeShock();
         this.bounce = 30; // 上升高度
         node.destroy();
+
+        // 播放粒子
+        var boom = cc.instantiate(this.explodeBoom);
+        boom.setPosition(node.x + 50, node.y + 50);
+        boom.parent = Global.game.map;
+
         this.scheduleOnce(function () {
             _this3.restData();
         }, 0.01);
@@ -265,6 +309,7 @@ cc.Class({
         var _this4 = this;
 
         if (Global.gameInfo.state == 'over' || this.value <= 1) return;
+        if (window.wx) wx.vibrateShort();
         this.bounce = 15; // 上升高度
         this.floorNum = 10;
         node.destroy();
@@ -311,6 +356,8 @@ cc.Class({
         this.restData();
         // 分数计数（模拟距离）
         this.score_count = 0;
+
+        this.moneyLabel.string = Global.userInfo.money;
     },
     start: function start() {},
     update: function update(dt) {

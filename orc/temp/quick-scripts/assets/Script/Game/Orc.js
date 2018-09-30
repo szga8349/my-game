@@ -4,7 +4,7 @@ cc._RF.push(module, '97443cTQwVMNq2iqPKKQ/56', 'Orc', __filename);
 
 'use strict';
 
-// const Global = require('Global');
+var Global = require('Global');
 
 cc.Class({
     extends: cc.Component,
@@ -25,12 +25,16 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad: function onLoad() {
-        this.move = parseInt(5 * Math.random()) + 4;
-    },
-    start: function start() {},
+    // onLoad () {
+
+    // },
+
+    // start () {
+
+    // },
+
     update: function update(dt) {
-        this.node.x += this.move;
+        this.node.x += this.node.moveSpeed;
         this.nodeMove();
     }
 });

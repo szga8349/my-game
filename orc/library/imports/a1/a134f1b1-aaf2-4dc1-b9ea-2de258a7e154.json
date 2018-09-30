@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "biaodai",
+    "texture": "6398fe84-6a45-49ce-a826-ff1f6e7fdedc",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      193,
+      92
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      193,
+      92
+    ],
+    "capInsets": [
+      95,
+      0,
+      95,
+      0
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-// const Global = require('Global');
+const Global = require('Global');
 
 cc.Class({
     extends: cc.Component,
@@ -20,16 +20,16 @@ cc.Class({
     },
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
-        this.move = parseInt(5 * Math.random()) + 4;
-    },
+    // onLoad () {
+        
+    // },
 
-    start () {
+    // start () {
 
-    },
+    // },
 
     update (dt) {
-        this.node.x += this.move;
+        this.node.x += this.node.moveSpeed;
         this.nodeMove();
     },
 });

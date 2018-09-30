@@ -25,6 +25,7 @@ cc.Class({
         cc.director.loadScene('Game');
     },
     backHome: function backHome() {
+        if (window.wx) wx.postMessage({ action: 'hide' });
         cc.director.loadScene('Home');
     },
 
