@@ -52,7 +52,8 @@ cc.Class({
         switch (Number(num)) {
             case 1:
                 if (Global.userInfo.dash == 0) {
-                    utils.showToast('当前道具为0，无法使用');
+                    this.switchSkillBox();
+                    this.switchShop(null, 'show');
                 } else {
                     Global.userInfo.dash -= 1;
                     Global.gameInfo.startDash = 3;
@@ -62,7 +63,8 @@ cc.Class({
                 break;
             case 2:
                 if (Global.userInfo.boom == 0) {
-                    utils.showToast('当前道具为0，无法使用');
+                    this.switchSkillBox();
+                    this.switchShop(null, 'show');
                 } else {
                     Global.userInfo.boom -= 1;
                     Global.saveData();
@@ -72,7 +74,8 @@ cc.Class({
                 break;
             case 3:
                 if (Global.userInfo.fanatical == 0) {
-                    utils.showToast('当前道具为0，无法使用');
+                    this.switchSkillBox();
+                    this.switchShop(null, 'show');
                 } else {
                     Global.userInfo.fanatical -= 1;
                     Global.saveData();
@@ -143,18 +146,18 @@ cc.Class({
         cc.find('skill-3/content', this.skilBox).getComponent(cc.Label).string = '兽人狂暴 ×' + Global.userInfo.fanatical;
 
         if (Global.userInfo.dash == 0) {
-            cc.find('skill-1/btn/text', this.skilBox).getComponent(cc.Label).string = '不可用';
+            cc.find('skill-1/btn/text', this.skilBox).getComponent(cc.Label).string = '去购买';
         } else{
             cc.find('skill-1/btn/text', this.skilBox).getComponent(cc.Label).string = '使用';
         } 
         if (Global.userInfo.boom == 0) {
-            cc.find('skill-2/btn/text', this.skilBox).getComponent(cc.Label).string = '不可用';
+            cc.find('skill-2/btn/text', this.skilBox).getComponent(cc.Label).string = '去购买';
         } else {
             cc.find('skill-2/btn/text', this.skilBox).getComponent(cc.Label).string = '使用';
         }
         
         if (Global.userInfo.fanatical == 0) {
-            cc.find('skill-3/btn/text', this.skilBox).getComponent(cc.Label).string = '不可用';
+            cc.find('skill-3/btn/text', this.skilBox).getComponent(cc.Label).string = '去购买';
         } else {
             cc.find('skill-3/btn/text', this.skilBox).getComponent(cc.Label).string = '使用';
         }
