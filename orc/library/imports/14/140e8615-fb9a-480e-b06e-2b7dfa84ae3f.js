@@ -262,12 +262,13 @@ cc.Class({
         }
         orc.y = 0;
         orc.x = -orc.width;
-        orc.parent = this.map;
         // 赋值（兽人速度）
         if (index != null) {
             console.log('兽人速度赋值');
             orc.moveSpeed = 2 + 0.8 * Global.gameInfo.crazy * index;
+            orc.getChildByName('node').getComponent(dragonBones.ArmatureDisplay).timeScale = 1 + index * 0.1;
         }
+        orc.parent = this.map;
     },
 
     // 制造道具兽人
@@ -276,6 +277,7 @@ cc.Class({
         orc.y = 0;
         orc.x = -orc.width;
         orc.moveSpeed = parseInt(5 * Math.random()) + 5 * Global.gameInfo.crazy;
+        orc.getChildByName('node').getComponent(dragonBones.ArmatureDisplay).timeScale = 1 + orc.moveSpeed / 5 * 0.2;
         orc.parent = this.map;
     },
 
