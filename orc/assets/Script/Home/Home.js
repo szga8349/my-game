@@ -1,8 +1,6 @@
 const Global = require('Global');
 const utils = require('utils');
 
-// console.log(CusBASE64.encoder);
-
 cc.Class({
     extends: cc.Component,
 

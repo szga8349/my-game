@@ -7,8 +7,6 @@ cc._RF.push(module, 'f149fTAsvFGpqRl39CPTvqE', 'Home');
 var Global = require('Global');
 var utils = require('utils');
 
-// console.log(CusBASE64.encoder);
-
 cc.Class({
     extends: cc.Component,
 

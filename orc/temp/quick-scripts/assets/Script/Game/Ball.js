@@ -97,15 +97,15 @@ cc.Class({
         if (this.node.y < val) return;
 
         // 第一种（性能更好）
-        // Global.game.wrap.scale = val / this.node.y;
+        Global.game.wrap.scale = val / this.node.y;
 
         /**
-         * 第二种
+         * 第二种（有点小瑕疵）
          * 75：球的半径
          * 890：球弹起来的最大高度
          */
-        var ss = 75 / (890 / this.node.y);
-        Global.game.wrap.scale = (val - ss) / this.node.y;
+        // let ss = 75 / (890 / this.node.y);
+        // Global.game.wrap.scale = (val - ss) / this.node.y;
     },
 
 
