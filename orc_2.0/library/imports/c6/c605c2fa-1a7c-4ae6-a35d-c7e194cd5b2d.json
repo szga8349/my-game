@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sign_1",
+    "texture": "d6182054-bfef-4ec5-9287-36ff4597016f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      150,
+      36
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      150,
+      36
+    ]
+  }
+}

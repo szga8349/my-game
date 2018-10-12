@@ -1,0 +1,13 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "speed_tex",
+  "_objFlags": 0,
+  "_native": "",
+  "_atlasJson": "{\"width\":512,\"SubTexture\":[{\"width\":280,\"y\":51,\"height\":10,\"name\":\"2\",\"x\":1},{\"width\":280,\"y\":63,\"height\":10,\"name\":\"2_2\",\"x\":1},{\"width\":280,\"y\":75,\"height\":10,\"name\":\"2_1\",\"x\":1},{\"width\":145,\"y\":73,\"height\":9,\"name\":\"1\",\"x\":283},{\"width\":146,\"y\":51,\"height\":9,\"name\":\"1_2\",\"x\":283},{\"width\":145,\"y\":62,\"height\":9,\"name\":\"1_1\",\"x\":283},{\"width\":467,\"y\":1,\"height\":23,\"name\":\"3\",\"x\":1},{\"width\":454,\"y\":26,\"height\":23,\"name\":\"3_1\",\"x\":1}],\"imagePath\":\"speed_tex.png\",\"height\":128,\"name\":\"speed\"}",
+  "_texture": {
+    "__uuid__": "921e8f57-bd46-494c-b33a-e9e87792f7c2"
+  },
+  "texture": {
+    "__uuid__": "921e8f57-bd46-494c-b33a-e9e87792f7c2"
+  }
+}
