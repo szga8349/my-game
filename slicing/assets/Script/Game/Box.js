@@ -88,15 +88,21 @@ cc.Class({
     
     // 检测音效播放
     checkAudio() {
-        if (Global.userInfo.theme == 'box-white') {
+        let type = null;
+        if (Global.gameInfo.theme == 'none') {
+            type = Global.userInfo.theme;
+        } else {
+            type = Global.gameInfo.theme;
+        }
+        if (type == 'box-white') {
             cc.audioEngine.play(Global.game.boxAudios[0], false);
-        }else if (Global.userInfo.theme.includes('fruit')) {
+        }else if (type.includes('fruit')) {
             cc.audioEngine.play(Global.game.boxAudios[1], false);
-        } else if (Global.userInfo.theme.includes('cartoon')) {
+        } else if (type.includes('cartoon')) {
             cc.audioEngine.play(Global.game.boxAudios[2], false);
-        } else if (Global.userInfo.theme.includes('universe')) {
+        } else if (type.includes('universe')) {
             cc.audioEngine.play(Global.game.boxAudios[3], false);
-        } else if (Global.userInfo.theme.includes('office')) {
+        } else if (type.includes('office')) {
             cc.audioEngine.play(Global.game.boxAudios[4], false);
         }
     },
