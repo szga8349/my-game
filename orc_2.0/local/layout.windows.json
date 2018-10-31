@@ -45,21 +45,21 @@
                     "children": [
                       "scene"
                     ],
-                    "height": 672.8125,
+                    "height": 673.1375122070312,
                     "type": "panel",
-                    "width": 879.6375122070312
+                    "width": 879.4249877929688
                   },
                   {
                     "active": 0,
                     "children": [
                       "node-library"
                     ],
-                    "height": 672.8125,
+                    "height": 673.1375122070312,
                     "type": "panel",
-                    "width": 311.5874938964844
+                    "width": 311.8000183105469
                   }
                 ],
-                "height": 672.8125,
+                "height": 673.1375122070312,
                 "type": "dock-h",
                 "width": 1194.2249755859375
               },
@@ -69,7 +69,7 @@
                   "console",
                   "timeline"
                 ],
-                "height": 326.38751220703125,
+                "height": 326.0625,
                 "type": "panel",
                 "width": 1194.2249755859375
               }
