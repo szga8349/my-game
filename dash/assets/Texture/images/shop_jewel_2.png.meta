@@ -1,0 +1,30 @@
+{
+  "ver": "2.0.0",
+  "uuid": "af7199dc-6361-42c9-892e-68ff0e9c3137",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "shop_jewel_2": {
+      "ver": "1.0.3",
+      "uuid": "6d254566-c0eb-4ee8-946e-f3b12024446e",
+      "rawTextureUuid": "af7199dc-6361-42c9-892e-68ff0e9c3137",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 4,
+      "offsetY": 0,
+      "trimX": 13,
+      "trimY": 0,
+      "width": 179,
+      "height": 124,
+      "rawWidth": 197,
+      "rawHeight": 124,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
